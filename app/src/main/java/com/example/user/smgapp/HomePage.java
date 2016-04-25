@@ -56,7 +56,12 @@ public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private static String url = "http://52.77.18.137/api/allcategory.php";
     private ProgressDialog pDialog;
+<<<<<<< HEAD
    public TextView nav_title;
+=======
+    public TextView nav_title;
+
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
 
     public static final String TAG_RESULTS = "category";
     public static final String TAG_CAT_ID = "main_cat_id";
@@ -66,7 +71,11 @@ public class HomePage extends AppCompatActivity
     public static final String TAG_SUB_SUB_CAT_DETAILS = "sub_sub_cat_details";
     public static final String TAG_SUB_CAT_ID = "sub_cat_id";
     public static final String TAG_SUB_CAT_NAME = "sub_cat_name";
+<<<<<<< HEAD
     String thumb_nam,thumb_image,thumb_id;
+=======
+    String thumb_nam, thumb_image, thumb_id;
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
 
 
     public static final String TAG_SUB_SUB_DETAILS = "sub_sub_cat_details";
@@ -109,12 +118,20 @@ public class HomePage extends AppCompatActivity
     JSONArray SUB_SUB = null;
     DisplayMetrics metrics;
     int width;
+<<<<<<< HEAD
    public Typeface face;
+=======
+    public Typeface face;
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
     static TextView mDotsText[];
     private int mDotsCount;
     private LinearLayout mDotsLayout;
     Gallery gallery;
+<<<<<<< HEAD
     View v1,v2,v3,v4;
+=======
+    View v1, v2, v3, v4;
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
 
 
     protected View view;
@@ -147,6 +164,7 @@ public class HomePage extends AppCompatActivity
         listview2_txt = (TextView) findViewById(R.id.listview2_txt);
         listview3_txt = (TextView) findViewById(R.id.listview3_txt);
         listview4_txt = (TextView) findViewById(R.id.listview4_txt);
+<<<<<<< HEAD
         v1=findViewById(R.id.view1);
         v2=findViewById(R.id.view2);
         v3=findViewById(R.id.view3);
@@ -154,6 +172,15 @@ public class HomePage extends AppCompatActivity
         nav_title= (TextView) findViewById(R.id.navigation_title);
         face=Typeface.createFromAsset(getAssets(),"fonts/OpenSans-Regular.ttf");
         grid= (GridView) findViewById(R.id.grid);
+=======
+        v1 = findViewById(R.id.view1);
+        v2 = findViewById(R.id.view2);
+        v3 = findViewById(R.id.view3);
+        v4 = findViewById(R.id.view4);
+        nav_title = (TextView) findViewById(R.id.navigation_title);
+        face = Typeface.createFromAsset(getAssets(), "fonts/OpenSans-Regular.ttf");
+        grid = (GridView) findViewById(R.id.grid);
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
 
 
 
@@ -164,11 +191,21 @@ public class HomePage extends AppCompatActivity
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setHasFixedSize(true);
 */
+<<<<<<< HEAD
        // mAdapter = new GridAdapter();
       //  mRecyclerView.setAdapter(mAdapter);
 
        // trendAdapter = new TrendingAdapter();
      
+=======
+        // mAdapter = new GridAdapter();
+        //  mRecyclerView.setAdapter(mAdapter);
+
+        // trendAdapter = new TrendingAdapter();
+
+
+
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
         gallery = (Gallery) findViewById(R.id.gallery);
 
         gallery.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -257,7 +294,10 @@ public class HomePage extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
         expandableList = (ExpandableListView) findViewById(R.id.expandable_list);
         if (navigationView != null) {
             setupDrawerContent(navigationView);
@@ -295,11 +335,17 @@ public class HomePage extends AppCompatActivity
             searchView.setSearchableInfo(searchManager.getSearchableInfo(HomePage.this.getComponentName()));
             handleIntent(getIntent());
         }
+<<<<<<< HEAD
         return super.onCreateOptionsMenu(menu);
     }
 
 
 
+=======
+        return true;
+    }
+
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
@@ -321,6 +367,7 @@ public class HomePage extends AppCompatActivity
         }*/
 
         if (id == R.id.action_login) {
+<<<<<<< HEAD
             return true;
         }
 
@@ -332,6 +379,15 @@ public class HomePage extends AppCompatActivity
             Intent in=new Intent(this,TermsandCondition.class);
             startActivity(in);
         }
+=======
+
+            Intent intent=new Intent(HomePage.this,Login.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
 
         return super.onOptionsItemSelected(item);
 
@@ -357,10 +413,16 @@ public class HomePage extends AppCompatActivity
     }
 
 
+<<<<<<< HEAD
 
 
     public class HorizAdapter extends BaseAdapter {
         ArrayList<HashMap<String, String>> list_sub;
+=======
+    public class HorizAdapter extends BaseAdapter {
+        ArrayList<HashMap<String, String>> list_sub;
+
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
         public HorizAdapter(ArrayList<HashMap<String, String>> list_sub) {
             this.list_sub = list_sub;
         }
@@ -395,17 +457,25 @@ public class HomePage extends AppCompatActivity
             image.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+<<<<<<< HEAD
                     Toast.makeText(getApplicationContext(),"u clicked on id:"+list_sub.get(position).get("product_id"),Toast.LENGTH_SHORT).show();
+=======
+                    Toast.makeText(getApplicationContext(), "u clicked on id:" + list_sub.get(position).get("product_id"), Toast.LENGTH_SHORT).show();
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                 }
             });
 
             return retval;
         }
 
+<<<<<<< HEAD
     }
 
     ;
 
+=======
+    };
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
 
 
     private class ExpandableListAdapter extends BaseExpandableListAdapter {
@@ -420,8 +490,13 @@ public class HomePage extends AppCompatActivity
             this.mListDataHeader = listDataHeader;
             this.mListDataChild = listChildData;
             this.expandList = mView;
+<<<<<<< HEAD
         }
 
+=======
+
+        }
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
 
         @Override
         public int getGroupCount() {
@@ -433,10 +508,19 @@ public class HomePage extends AppCompatActivity
         @Override
         public int getChildrenCount(int groupPosition) {
             int childCount = 0;
+<<<<<<< HEAD
 
             childCount = this.mListDataChild.get(this.mListDataHeader.get(groupPosition))
                     .size();
 
+=======
+          childCount = this.mListDataChild.get(this.mListDataHeader.get(groupPosition))
+                    .size();
+
+            Log.d("CMP_childCount","c_"+childCount);
+
+
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
             return childCount;
         }
 
@@ -451,6 +535,10 @@ public class HomePage extends AppCompatActivity
                     .get(childPosition).toString());
             return this.mListDataChild.get(this.mListDataHeader.get(groupPosition))
                     .get(childPosition);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
         }
 
         @Override
@@ -479,9 +567,16 @@ public class HomePage extends AppCompatActivity
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = infalInflater.inflate(R.layout.listheader, null);
             }
+<<<<<<< HEAD
             TextView lblListHeader = (TextView) convertView
                     .findViewById(R.id.submenu);
             ImageView headerIcon = (ImageView) convertView.findViewById(R.id.iconimage);
+=======
+
+            TextView lblListHeader = (TextView) convertView
+                    .findViewById(R.id.submenu);
+           // ImageView headerIcon = (ImageView) convertView.findViewById(R.id.iconimage);
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
             lblListHeader.setTypeface(face, Typeface.BOLD);
             lblListHeader.setText(headerTitle.getIconName());
             return convertView;
@@ -532,9 +627,15 @@ public class HomePage extends AppCompatActivity
 
         @Override
         protected Void doInBackground(Void... params) {
+<<<<<<< HEAD
         // Creating service handler class instance
             ServiceHandler sh = new ServiceHandler();
         // Making a request to url and getting response
+=======
+            // Creating service handler class instance
+            ServiceHandler sh = new ServiceHandler();
+            // Making a request to url and getting response
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
             String jsonStr = sh.makeServiceCall(url, ServiceHandler.GET);
             Log.d("jsonStr", "" + jsonStr);
             listDataChild = new HashMap<ExpandableMenuModel, List<String>>();
@@ -559,11 +660,15 @@ public class HomePage extends AppCompatActivity
                                     parent_name_array.add(main_cat_name);
                                     parent_hash.put("id", cat_id);
                                     parent_hash.put("name", main_cat_name);
+<<<<<<< HEAD
                                     Log.d("main_cat_name",""+main_cat_name);
+=======
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                                     parent_cat.add(parent_hash);
                                     ExpandableMenuModel model = new ExpandableMenuModel();
                                     model.setIconName(main_cat_name);
                                     listDataHeader.add(model);
+<<<<<<< HEAD
                                     Log.e("length..","listdata headet length..."+listDataHeader.size());
                                     //sub_cat_deatils
 
@@ -573,6 +678,17 @@ public class HomePage extends AppCompatActivity
                                     }else {
 
 
+=======
+                                    Log.e("length..", "listdata headet length..." + listDataHeader.size());
+                                    //sub_cat_deatils
+                                    child_name_array = new ArrayList<>();
+                                    if (elem.isNull(TAG_SUB_CAT_DETAILS)) {
+
+                                        Log.i("null array...", "null array");
+                                        listDataChild.put(model, child_name_array);
+
+                                    } else {
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                                         JSONArray prods = elem.getJSONArray(TAG_SUB_CAT_DETAILS);
 
                                         if (prods != null) {
@@ -620,9 +736,15 @@ public class HomePage extends AppCompatActivity
                                             Log.e("array_list_sub_ids", "array_list_sub_ids" + array_list_sub_ids);
                                             listDataChild.put(model, child_name_array);
                                             Log.e("child header..", "child Header.." + listDataChild);
+<<<<<<< HEAD
 
                                         }
 
+=======
+                                            Log.d("CMP_child_array","_"+child_name_array.size());
+
+                                        }
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                                     }
                                 }
                                 array_list_sub_ids.add(sub_cat);
@@ -630,6 +752,7 @@ public class HomePage extends AppCompatActivity
 
                         }
 
+<<<<<<< HEAD
                         JSONArray thumb_array=jsonObj.getJSONArray("thumbnail");
                         if (thumb_array!=null){
                             thumb_images_array=new ArrayList<>();
@@ -648,6 +771,26 @@ public class HomePage extends AppCompatActivity
                                     thumb_hash.put("thumb_id", thumb_id);
                                     thumb_hash.put("thumb_nam",thumb_nam);
                                     thumb_hash.put("thumb_image",thumb_image);
+=======
+                        JSONArray thumb_array = jsonObj.getJSONArray("thumbnail");
+                        if (thumb_array != null) {
+                            thumb_images_array = new ArrayList<>();
+                            thumb_details = new ArrayList<>();
+                            thumb_cat_id = new ArrayList<>();
+                            for (int i = 0; i < thumb_array.length(); i++) {
+                                JSONObject thumb_obj = thumb_array.getJSONObject(i);
+                                HashMap<String, String> thumb_hash = new HashMap<>();
+
+                                if (thumb_obj != null) {
+                                    thumb_nam = thumb_obj.getString("cat_name");
+                                    thumb_id = thumb_obj.getString("cat_id");
+                                    thumb_image = thumb_obj.getString("cat_image");
+                                    thumb_images_array.add(thumb_image);
+                                    thumb_cat_id.add(thumb_id);
+                                    thumb_hash.put("thumb_id", thumb_id);
+                                    thumb_hash.put("thumb_nam", thumb_nam);
+                                    thumb_hash.put("thumb_image", thumb_image);
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                                     thumb_details.add(thumb_hash);
                                     Log.e("thumb details...", "thumb details.." + thumb_cat_id);
 
@@ -658,7 +801,10 @@ public class HomePage extends AppCompatActivity
                         }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                         JSONArray banner_array = jsonObj.getJSONArray("banner");
                         if (banner_array != null) {
                             banner_images_array = new ArrayList<>();
@@ -695,10 +841,17 @@ public class HomePage extends AppCompatActivity
                                             Log.e("", "jsonArray length....." + jsonArray.length());
                                             JSONObject jobj = jsonArray.getJSONObject(j);
                                             if (jobj != null) {
+<<<<<<< HEAD
                                                 String product_id=jobj.getString("product_id");
                                                 String product_name = jobj.getString("product_name");
                                                 String product_image = jobj.getString("product_image");
                                                 product_details_hash.put("product_id",product_id);
+=======
+                                                String product_id = jobj.getString("product_id");
+                                                String product_name = jobj.getString("product_name");
+                                                String product_image = jobj.getString("product_image");
+                                                product_details_hash.put("product_id", product_id);
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                                                 product_details_hash.put("product_name", product_name);
                                                 product_details_hash.put("product_image", product_image);
                                                 details_array.add(product_details_hash);
@@ -720,7 +873,11 @@ public class HomePage extends AppCompatActivity
                             }
                         }
                     }
+<<<<<<< HEAD
                     } catch (JSONException e) {
+=======
+                } catch (JSONException e) {
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                     e.printStackTrace();
                 }
             } else {
@@ -734,6 +891,7 @@ public class HomePage extends AppCompatActivity
             super.onPostExecute(aVoid);
             pDialog.dismiss();
             mMenuAdapter = new ExpandableListAdapter(getApplication(), listDataHeader, listDataChild, expandableList);
+<<<<<<< HEAD
             expandableList.setAdapter(mMenuAdapter);
            gallery();
             expandableOnclick();
@@ -744,6 +902,17 @@ public class HomePage extends AppCompatActivity
 
             if (main_product_details.size() ==4)
             {
+=======
+          // mMenuAdapter.getChildrenCount(listDataHeader.get(position));
+            expandableList.setAdapter(mMenuAdapter);
+            gallery();
+            expandableOnclick();
+            gadapter = new GridViewAdapter(getApplicationContext(), thumb_images_array, thumb_cat_id);
+            grid.setAdapter(gadapter);
+
+
+            if (main_product_details.size() == 4) {
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                 listview.setAdapter(new HorizAdapter(main_product_details.get(0)));
                 listview_txt.setText(main_cat_name_array.get(0));
                 listView2.setAdapter(new HorizAdapter(main_product_details.get(1)));
@@ -760,15 +929,23 @@ public class HomePage extends AppCompatActivity
                 listView2.setVisibility(View.VISIBLE);
                 listView3.setVisibility(View.VISIBLE);
                 listView4.setVisibility(View.VISIBLE);
+<<<<<<< HEAD
             }
             else if (main_product_details.size()==1){
+=======
+            } else if (main_product_details.size() == 1) {
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                 listview.setAdapter(new HorizAdapter(main_product_details.get(0)));
                 listview_txt.setText(main_cat_name_array.get(0));
                 v1.setVisibility(View.VISIBLE);
                 listview.setVisibility(View.VISIBLE);
 
+<<<<<<< HEAD
             }
             else if(main_product_details.size()==2) {
+=======
+            } else if (main_product_details.size() == 2) {
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
 
                 listview.setAdapter(new HorizAdapter(main_product_details.get(0)));
                 listview_txt.setText(main_cat_name_array.get(0));
@@ -778,8 +955,12 @@ public class HomePage extends AppCompatActivity
                 v2.setVisibility(View.VISIBLE);
                 listview.setVisibility(View.VISIBLE);
                 listView2.setVisibility(View.VISIBLE);
+<<<<<<< HEAD
             }
             else if(main_product_details.size()==3) {
+=======
+            } else if (main_product_details.size() == 3) {
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                 listview.setAdapter(new HorizAdapter(main_product_details.get(0)));
                 listview_txt.setText(main_cat_name_array.get(0));
                 listView2.setAdapter(new HorizAdapter(main_product_details.get(1)));
@@ -800,6 +981,18 @@ public class HomePage extends AppCompatActivity
 
     private void expandableOnclick() {
 
+<<<<<<< HEAD
+=======
+       /* expandableList.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+                Log.d("onGroupClick:", "worked");
+                parent.expandGroup(groupPosition);
+                return false;
+            }
+        });*/
+
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
 
         expandableList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
@@ -817,6 +1010,7 @@ public class HomePage extends AppCompatActivity
     }
 
 
+<<<<<<< HEAD
 
     private void gallery() {
         gallery.setAdapter(new ImageAdapter(getApplicationContext()));
@@ -830,6 +1024,16 @@ public class HomePage extends AppCompatActivity
         //as you can see the dots are nothing but "."  of large size
         mDotsText = new TextView[mDotsCount];
 
+=======
+    private void gallery() {
+        gallery.setAdapter(new ImageAdapter(getApplicationContext()));
+        mDotsLayout = (LinearLayout) findViewById(R.id.image_count);
+        //here we count the number of images we have to know how many dots we need
+        mDotsCount = gallery.getAdapter().getCount();
+        //here we create the dots
+        //as you can see the dots are nothing but "."  of large size
+        mDotsText = new TextView[mDotsCount];
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
         //here we set the dots
         for (int i = 0; i < mDotsCount; i++) {
             mDotsText[i] = new TextView(getApplication());
@@ -844,6 +1048,10 @@ public class HomePage extends AppCompatActivity
 
     private class ImageAdapter extends BaseAdapter {
         private Context mContext;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
         //constructor
         public ImageAdapter(Context c) {
             mContext = c;
@@ -881,6 +1089,7 @@ public class HomePage extends AppCompatActivity
     }
 
 
+<<<<<<< HEAD
   public class GridViewAdapter  extends BaseAdapter{
         private Context mContext;
       ArrayList<String> images, id;
@@ -890,6 +1099,17 @@ public class HomePage extends AppCompatActivity
             mContext = c;
             this.images = thumb_nail_images;
             this.id=thumb_id;
+=======
+    public class GridViewAdapter extends BaseAdapter {
+        private Context mContext;
+        ArrayList<String> images, id;
+
+
+        public GridViewAdapter(Context c, ArrayList<String> thumb_nail_images, ArrayList<String> thumb_id) {
+            mContext = c;
+            this.images = thumb_nail_images;
+            this.id = thumb_id;
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
 
         }
 
@@ -922,16 +1142,26 @@ public class HomePage extends AppCompatActivity
 
                 grid = new View(mContext);
                 grid = inflater.inflate(R.layout.grid_item, null);
+<<<<<<< HEAD
                // TextView textView = (TextView) grid.findViewById(R.id.grid_text);
                 ImageView imageView = (ImageView)grid.findViewById(R.id.img_thumbnail);
                // textView.setText(web[position]);
+=======
+                // TextView textView = (TextView) grid.findViewById(R.id.grid_text);
+                ImageView imageView = (ImageView) grid.findViewById(R.id.img_thumbnail);
+                // textView.setText(web[position]);
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                 Picasso.with(getApplicationContext())
                         .load(images.get(position)).into(imageView);
 
                 imageView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+<<<<<<< HEAD
                         Toast.makeText(getApplicationContext(),"selected id:"+id.get(position),Toast.LENGTH_SHORT).show();
+=======
+                        Toast.makeText(getApplicationContext(), "selected id:" + id.get(position), Toast.LENGTH_SHORT).show();
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
                         Intent intent = new Intent(getApplication(), ProductList.class);
                         intent.putExtra("id", id.get(position));
                         startActivity(intent);
@@ -947,4 +1177,8 @@ public class HomePage extends AppCompatActivity
             return grid;
         }
     }
+<<<<<<< HEAD
     }
+=======
+}
+>>>>>>> 61ec2962a1e8734a2fed50ad6b98af76f9e41883
