@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_bar_custom_cart"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminateDrawable="@drawable/my_progress_indeterminate"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:foregroundGravity="center"
+        android:visibility="invisible"
+
+        />
+
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cartrelativehead"
+        >
+
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentLeft="true" >
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <RelativeLayout
+            android:id="@+id/pincoderelative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="10dp"
+            >
+
+        <TextView
+            android:id="@+id/pincodetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#808080"
+            android:text="Pincode:"/>
+
+            <TextView
+                android:id="@+id/pincodevaluetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pincodetxt"
+
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_alignBaseline="@+id/pincodetxt"
+                android:layout_alignLeft="@+id/datecartvaluetxt"
+                android:text="570077"/>
+
+            <TextView
+                android:id="@+id/datecarttxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+               android:layout_below="@+id/pincodetxt"
+                android:layout_alignLeft="@+id/pincodetxt"
+                android:layout_marginTop="10dp"
+                android:textColor="#808080"
+                android:text="Delivery Date:"/>
+
+            <TextView
+                android:id="@+id/datecartvaluetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/datecarttxt"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_alignBaseline="@+id/datecarttxt"
+
+                android:layout_below="@+id/pincodevaluetxt"
+                android:layout_marginLeft="5dp"
+                android:text="22/07/16"/>
+
+            <TextView
+                android:id="@+id/timecarttxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@+id/datecarttxt"
+                android:layout_alignLeft="@+id/pincodetxt"
+                android:layout_marginTop="10dp"
+                android:textColor="#808080"
+                android:text="Delivery Time:"/>
+
+            <TextView
+                android:id="@+id/timecartvaluetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/timecarttxt"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_alignBaseline="@+id/timecarttxt"
+                android:layout_alignLeft="@+id/datecartvaluetxt"
+                android:layout_below="@+id/datecartvaluetxt"
+                android:text="07:37am"/>
+
+
+
+        </RelativeLayout>
+            <View
+                android:id="@+id/linepink"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/pincoderelative"
+                android:layout_marginTop="18dp"
+                android:background="#EDADE8" />
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="fill_parent"
+                android:layout_gravity="center"
+                android:layout_height="fill_parent"
+
+                android:layout_below="@+id/linepink"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:id="@+id/table_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" >
+                </TableLayout>
+            </RelativeLayout>
+
+           <!-- <RelativeLayout
+                android:id="@+id/rel_outtr_delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearone"
+                android:layout_marginTop="12dp"
+                android:background="#F5EEF2"
+                android:paddingBottom="20dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_delivryCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="10dp">
+
+                    &lt;!&ndash; <EditText
+                         android:id="@+id/delivryCity"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Delivery City"
+                         android:singleLine="true" />&ndash;&gt;
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Delivery City"
+                        android:id="@+id/delivryCity"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/delvry_validatn_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/input_layout_delivryCity"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:text="Service is available in this city."
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#0DB548"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/tv_det_pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/delvry_validatn_txt"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/grid_item_bg"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:maxLength="6"
+                    android:minLines="6"
+                    android:hint="Select pin code"
+                    android:numeric="integer"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="16sp" />
+
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/in_date"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/tv_det_pincode" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT DATE"
+                    android:id="@+id/btn_date"
+                    android:layout_alignBottom="@+id/in_date"
+                    android:layout_toRightOf="@+id/in_date"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@+id/in_date" />
+
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/in_time"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/in_date" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT TIME"
+                    android:id="@+id/btn_time"
+                    android:layout_alignBottom="@+id/in_time"
+                    android:layout_toRightOf="@+id/in_time"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@+id/in_time" />
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Delivery available."
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#0DB548"
+                    android:id="@+id/pincode_validtn_txt"
+                    android:layout_below="@+id/tv_det_pincode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Delivery with in 4-5 days"
+                    android:id="@+id/delivry_duratn"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/pincode_validtn_txt"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:visibility="gone" />
+
+
+
+
+            </RelativeLayout>
+
+
+-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeone"
+                android:layout_below="@+id/linearone"
+                android:visibility="visible"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Discount Codes"
+                    android:id="@+id/discountcodestext"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/discountcodestext">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/applycodeedittext"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="3"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/discountcodestext"
+                    android:layout_alignLeft="@+id/discountcodestext"
+                    android:layout_alignStart="@+id/discountcodestext" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="APPLY"
+                    android:id="@+id/applybutton"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:background="#CF0A8B"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/applycodeedittext"
+                    android:layout_alignBaseline="@+id/applycodeedittext"
+                    />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:gravity="center"
+                android:layout_below="@+id/RelativeLayout1">
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Clear All Items"
+                    android:id="@+id/clearallitembutton"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:background="#CF0A8B"
+
+
+
+
+                    />
+
+
+<!--
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear All Items"
+                    android:id="@+id/clearallitembutton"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="30dp"
+                    android:textStyle="bold"
+                    android:background="#CF0A8B"
+                    android:layout_weight="1"
+
+
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update Cart"
+                    android:id="@+id/updatecartbutto"
+                   android:layout_marginRight="10dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:background="#CF0A8B"
+                    android:visibility="invisible"
+                  android:layout_weight="1"
+
+                    />-->
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativetwo"
+
+                android:layout_below="@+id/relativeone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Sub Total :"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:id="@+id/subtotaltext"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="1098.00"
+                    android:id="@+id/subtotalvaluetext"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/subtotaltext"
+                    android:layout_alignBaseline="@+id/subtotaltext"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Grand Total :"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:id="@+id/grandtotaltext"
+                    android:layout_below="@+id/subtotaltext"
+                    android:layout_alignRight="@+id/subtotaltext"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="1098.00"
+                android:id="@+id/grandtotalvaluetext"
+                android:textColor="#CF0A8B"
+                android:textSize="20sp"
+                    android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/grandtotaltext"
+                android:layout_alignBaseline="@+id/grandtotaltext"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Discount :"
+                    android:id="@+id/discounttext"
+                    android:textColor="#515151"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_below="@+id/grandtotaltext"
+                    android:layout_alignRight="@+id/grandtotaltext"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=""
+                    android:id="@+id/discountvaluetext"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/discounttext"
+                    android:layout_alignBaseline="@+id/discounttext"
+                    />
+
+                <View
+                    android:id="@+id/discountviewline"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/discounttext"
+                    android:layout_marginTop="8dp"
+                    android:visibility="invisible"
+                    android:layout_alignLeft="@+id/discounttext"
+                    android:layout_alignRight="@+id/grandtotalvaluetext"
+                    android:background="@color/darkgrey" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=" Total :"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:id="@+id/discounttotaltext"
+                    android:layout_below="@+id/discountviewline"
+                    android:layout_alignRight="@+id/subtotaltext"
+                    android:layout_marginTop="12dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="1088.00"
+                    android:id="@+id/discounttotalvaluetext"
+                    android:textColor="#CF0A8B"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/discounttotaltext"
+                    android:layout_alignBaseline="@+id/discounttotaltext"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+        <LinearLayout
+            android:id="@+id/bottomlinear"
+        android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+           >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Proceed To Checkout"
+        android:id="@+id/proceedtocheckoutbutton"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="#CF0A8B"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Proceed To Checkout"
+                android:id="@+id/blurproceedtocheckoutbtn"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="#EDADE8"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+
+            <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Update Cart"
+            android:id="@+id/updatecartbtn"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="2dp"
+            android:textStyle="bold"
+            android:background="#CF0A8B"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:layout_weight="1"
+            />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Update Cart"
+                android:id="@+id/blurupdatebtn"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="2dp"
+                android:textStyle="bold"
+                android:background="#EDADE8"
+                android:layout_alignParentBottom="true"
+                android:visibility="visible"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/belowview"
+        android:layout_centerInParent="true"
+        >
+
+        <TextView
+            android:id="@+id/emptyshopcarttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="SHOPPING CART IS EMPTY"
+            android:layout_centerHorizontal="true"
+            android:textColor="#CF0A8B"
+            android:layout_marginTop="15dp"
+
+            />
+
+        <View
+            android:id="@+id/emptycartviewline"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/emptyshopcarttext"
+            android:layout_marginTop="8dp"
+            android:layout_alignLeft="@+id/emptyshopcarttext"
+            android:layout_alignRight="@+id/emptyshopcarttext"
+           android:background="@color/darkgrey" />
+
+        <TextView
+            android:id="@+id/yourtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="You have no items in your shopping cart"
+            android:layout_centerHorizontal="true"
+
+            android:layout_below="@+id/emptycartviewline"
+            android:layout_marginTop="10dp"
+
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <TableLayout
+        android:id="@+id/tablehere"
+        android:layout_below="@+id/belowview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="55dp"
+            android:padding="5dp" >
+
+
+
+            <TextView
+                android:id="@+id/clicktext"
+                android:text="Click"
+
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/heretext"
+                android:text="  here"
+                android:textColorHighlight="#aaeecc"
+                android:textColor="#000000"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/continuetext"
+                android:text="  to continue shopping"
+
+
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </TableRow>
+
+
+
+
+    </TableLayout>
+    </RelativeLayout>

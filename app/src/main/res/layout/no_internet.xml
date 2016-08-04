@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+   <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_no_internet"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeToolbar"
+        tools:showIn="@layout/toolbar_no_internet">
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Send My Gift"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+
+    </android.support.v7.widget.Toolbar>
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="50dp"
+      android:gravity="center">
+
+      <ImageView
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:src="@drawable/connection_error"
+          android:layout_gravity="center_horizontal"
+          />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Internet Connection"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:id="@+id/no_internet"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:id="@+id/tryagain_btn"
+       android:textColor="#FFFFFF"
+        android:background="@drawable/button_radius"
+        android:text="Try Again"/>
+  </LinearLayout>
+</LinearLayout>

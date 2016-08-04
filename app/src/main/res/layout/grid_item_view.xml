@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/grid_item_bg"
+    >
+
+    <ImageView
+        android:id="@+id/p_img"
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/loading"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/p_name"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:minLines="2"
+        android:maxLines="2"
+        android:text="TextView"
+        android:gravity="center"
+        android:layout_below="@+id/p_img"
+        android:layout_centerHorizontal="true"
+        style="@style/product_name_txt"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="00.00"
+        android:id="@+id/orginal_p"
+        android:textSize="14sp"
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/p_name"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="00.00"
+        android:id="@+id/p_price"
+        android:textSize="14sp"
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/orginal_p"
+        android:layout_centerHorizontal="true"
+        style="@style/product_price_txt"/>
+
+    <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView5" />-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wish_list"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/wishlist_selector"/>
+
+
+</RelativeLayout>

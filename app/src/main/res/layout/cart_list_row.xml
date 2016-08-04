@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="15dp"
+    android:background="#f6f6f6">
+
+
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />-->
+    <ImageView
+        android:id="@+id/itemimg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="5dp"
+      android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="..."
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:maxEms="25"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/imagenametext"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_toRightOf="@+id/itemimg"
+
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleterow"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentTop="true"
+
+        android:background="@drawable/del10"
+
+
+        />
+
+
+
+
+
+
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/relativelay"
+         android:layout_below="@+id/imagenametext"
+         android:layout_toLeftOf="@+id/updatecartbutton"
+         android:layout_toStartOf="@+id/updatecartbutton">
+
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/imageView"
+             android:src="@drawable/logo"
+             android:layout_marginTop="18dp"
+             android:layout_marginLeft="15dp"
+
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textAppearance="?android:attr/textAppearanceSmall"
+             android:text="Product Id:"
+             android:id="@+id/pincodetext"
+             android:textColor="#000000"
+             android:layout_marginTop="20dp"
+             android:layout_marginLeft="10dp"
+             android:layout_below="@+id/imageView"
+             android:layout_alignLeft="@+id/imageView"
+             android:layout_toRightOf="@+id/imageView"/>
+
+         TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textAppearance="?android:attr/textAppearanceSmall"
+             android:text="560034"
+             android:id="@+id/pinnumbertext"
+             android:textStyle="normal"
+             android:textColor="#000000"
+             android:layout_alignBaseline="@+id/pincodetext"
+             android:layout_marginLeft="10dp"
+             android:layout_toRightOf="@+id/pincodetext"
+
+
+     </RelativeLayout>-->
+
+    <!-- <TableLayout
+         android:id="@+id/table"
+         android:layout_width="wrap_content"
+         android:layout_marginTop="10dp"
+        android:layout_below="@+id/imagenametext"
+         android:layout_height="wrap_content">
+ -->
+    <!--<TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:padding="10dip" >
+
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:text="PRICE"
+            android:layout_weight="1.5"
+            android:textColor="#000000"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textVie"
+            android:text="QTY"
+            android:textColor="#000000"
+
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/text"
+            android:text="SUBTOTAL"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        &lt;!&ndash; <Button
+             android:id="@+id/button1"
+             android:text="Column 2"
+             android:layout_weight="1"/>&ndash;&gt;
+    </TableRow>
+
+
+-->
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="1dp"
+        android:stretchColumns="*"
+        android:layout_below="@+id/itemimg"
+      android:layout_marginLeft="8dp"
+        android:layout_height="wrap_content"
+
+
+       >
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/priceval"
+                android:text="599.99"
+                android:textColor="#515151"
+                android:textStyle="normal"
+                android:layout_marginLeft="7dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/minusimgview"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/blacknew24"
+
+                />
+
+            <EditText
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:text=""
+                android:layout_marginTop="3dp"
+                android:textSize="15dp"
+                android:textColor="#000000"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:background="@drawable/shape"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/plusimgview"
+                android:src="@drawable/blacknew24plus"
+                android:layout_marginTop="3dp"
+
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/subtotalval"
+                android:text="100.99"
+                android:textColor="#CF0A8B"
+                android:layout_marginTop="4dp"
+                android:textStyle="normal"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+           <!-- <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deleterow"
+                android:layout_marginTop="10dp"
+               android:layout_marginRight="15dp"
+                android:layout_marginEnd="60dp"
+                android:layout_gravity="end"
+                android:background="@drawable/deletecart30"
+
+                />-->
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:id="@+id/atributesrelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+       android:layout_alignLeft="@+id/imagenametext"
+        android:layout_below="@+id/imagenametext"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/size"
+            android:text=""
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="normal"
+            android:textSize="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/color"
+            android:text=""
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="10dp"
+            android:textStyle="normal"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weight"
+            android:text=""
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="normal"
+            android:textSize="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flavour"
+            android:text=""
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="normal"
+            android:textSize="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+       >
+
+
+    </LinearLayout>
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stocktxt"
+        android:text="In stock"
+        android:textColor="#000000"
+        android:layout_marginTop="3dp"
+      android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textStyle="normal"
+        android:textSize="10dp"
+        android:layout_below="@+id/atributesrelative"
+        android:textAppearance="?android:attr/textAppearanceMedium" />-->
+
+
+    <View
+        android:id="@+id/viewline2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/table"
+        android:layout_marginTop="9dp"
+        android:background="#EDADE8" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="2sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="560034"
+        android:id="@+id/pinnumbertext"
+        android:layout_below="@+id/viewline2"
+        android:textStyle="normal"
+        android:textColor="#000000"
+        android:visibility="invisible"
+        android:layout_marginLeft="10dp"
+        />
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Update Cart"
+        android:id="@+id/updatecartbutton"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/pinnumbertext"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:background="#CF0A8B"
+        android:visibility="gone"
+
+
+        />
+
+   <!-- <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView6"
+        android:layout_alignTop="@+id/imagenametext"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />-->
+
+
+</RelativeLayout>
+
+    <!-- <TableRow
+         android:id="@+id/tableRow3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="15dp"
+         android:padding="10dip" >
+
+         &lt;!&ndash;<ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/plusimgview"
+             android:src="@drawable/plus20"
+
+             />&ndash;&gt;
+
+         <EditText
+             android:id="@+id/editText"
+             android:text="1"
+
+             android:textColor="#000000"
+             android:textStyle="normal"
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        &lt;!&ndash; <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/minusimgview"
+             android:src="@drawable/minus20"
+
+             />&ndash;&gt;
+
+     </TableRow>-->
+
+    <!--  <TableRow
+          android:id="@+id/tableRow4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:padding="10dip" >
+
+          <TextView
+              android:id="@+id/subtotalval"
+              android:text="100.99"
+              android:textColor="#000000"
+              android:textStyle="normal"
+              android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/deleterow"
+              android:layout_marginLeft="15dp"
+              android:background="@drawable/closebtn20"
+              />
+
+      </TableRow>
+
+-->
+
+
+    <!-- <Button
+         android:layout_width="150dp"
+         android:layout_height="wrap_content"
+         android:text="Update Cart"
+         android:id="@+id/updatecartbutton"
+         android:textColor="#FFFFFF"
+         android:layout_marginTop="15dp"
+         android:layout_below="@+id/relativelay"
+         android:layout_alignParentRight="true"
+         android:layout_marginRight="15dp"
+         android:textStyle="bold"
+         android:background="#CF0A8B"
+
+
+         />-->
+
+
+    <!-- <EditText
+                   android:layout_width="wrap_content"
+                   android:layout_height="32dp"
+                   android:gravity="center"
+                   android:id="@+id/editText"
+                   android:layout_weight="1"
+                   android:textColor="#000000"
+                   android:layout_marginLeft="40dp"
+
+                   android:maxLength="2"
+                   android:singleLine="true"
+                   android:inputType="number"
+                   android:ems="1"
+                   android:background="@drawable/shape"
+                   android:numeric="integer"
+                   />-->

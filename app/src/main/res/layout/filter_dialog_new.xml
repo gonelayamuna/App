@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="120dp"
+
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/list_filtr">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/filtr_main_list"
+            android:saveEnabled="true"
+            android:listSelector="@drawable/filtr_item_selector"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/details_filter"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/list_filtr"
+        android:layout_toEndOf="@+id/list_filtr">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/filtr_details_list"
+            android:divider="@color/colorPrimary"
+            android:dividerHeight="1dp"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+</RelativeLayout>

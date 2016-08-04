@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+   >
+
+
+    <RelativeLayout
+        android:id="@+id/loginrelative"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+
+        android:background="#ffffff"
+
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+       >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel_logindialog"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="25dp"
+
+            android:background="@drawable/closebtn20"
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_below="@+id/cancel_logindialog"
+            android:id="@+id/textinputemail"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+
+
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialogemailedittxt"
+                android:hint="Email/Mobile"
+                android:padding="10dp"
+                android:singleLine="true"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_below="@+id/textinputemail"
+            android:id="@+id/textinputpwd"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+
+
+            >
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialogpwdedittext"
+            android:hint="Password"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:layout_below="@+id/textinputemail"
+            android:layout_alignLeft="@+id/textinputemail"
+            android:layout_alignStart="@+id/textinputemail" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/forgotpwd"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot your password?"
+            android:layout_below="@+id/textinputpwd"
+            android:layout_marginTop="30dp"
+            android:layout_alignRight="@+id/textinputpwd"
+            android:textStyle="bold"
+            />
+
+        <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+          android:layout_below="@+id/forgotpwd"
+            android:layout_alignLeft="@+id/forgotpwd"
+            android:background="#CF0A8B"
+            android:layout_marginTop="12dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_alignRight="@+id/forgotpwd"
+        android:text="Login" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

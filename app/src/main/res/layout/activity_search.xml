@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.user.smgapp.SearchActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchEdittextNew"
+        android:drawableRight="@drawable/places_ic_search"
+        android:drawableLeft="@drawable/back30"
+        android:singleLine="true"
+        android:cursorVisible="true"
+
+
+
+
+
+        />
+
+  <!--  <ListView
+        android:id="@+id/listview1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="0dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/searchEdittextNew" />-->
+
+    <GridView
+        android:id="@+id/gridView11"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:horizontalSpacing="8dp"
+        android:numColumns="2"
+
+        android:verticalSpacing="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/searchEdittextNew"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </GridView>
+
+    <TextView
+        android:id="@+id/noitemfoundtxtvw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="No items found"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textColor="#CF0A8B"
+
+
+
+        />
+
+</RelativeLayout>

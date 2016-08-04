@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="YOUR ORDER HAS BEEN RECEIVED"
+        android:id="@+id/yourorderreceivedtxt"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="54dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="57dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="THANK YOU FOR YOUR PURCHASE"
+        android:id="@+id/thankyoupurchasetxt"
+
+        android:layout_below="@+id/yourorderreceivedtxt"
+        android:layout_alignLeft="@+id/yourorderreceivedtxt"
+        android:layout_alignStart="@+id/yourorderreceivedtxt"
+        android:textSize="17sp"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Your order#is:"
+        android:id="@+id/urorderistxt"
+        android:layout_below="@+id/thankyoupurchasetxt"
+        android:layout_alignLeft="@+id/thankyoupurchasetxt"
+        android:layout_alignStart="@+id/thankyoupurchasetxt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="100001334"
+        android:id="@+id/orderidtxtval"
+        android:layout_alignTop="@+id/urorderistxt"
+        android:layout_alignRight="@+id/continueshoppingbtn"
+        android:layout_alignEnd="@+id/continueshoppingbtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="You will receive an order confirmation email with details of your order and a link to track its progress"
+        android:id="@+id/uwilreceiveordertxt"
+        android:layout_below="@+id/urorderistxt"
+        android:layout_marginTop="35dp"
+        android:textSize="16sp"
+        android:layout_alignLeft="@+id/urorderistxt"
+        android:layout_alignStart="@+id/urorderistxt"
+        android:layout_alignRight="@+id/yourorderreceivedtxt"
+        android:layout_alignEnd="@+id/yourorderreceivedtxt" />
+
+    <Button
+        android:id="@+id/continueshoppingbtn"
+        android:layout_width="170dp"
+        android:layout_height="45dp"
+        android:text="Continue Shopping"
+        android:textColor="#ffffff"
+        android:background="#CF0A8B"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/uwilreceiveordertxt"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

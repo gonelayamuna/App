@@ -1,0 +1,73 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SingleItemView">
+
+  <!--  <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/search"
+        android:title="@string/action_search"
+
+        app:showAsAction="ifRoom" />-->
+  <!--  <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/cart"
+        android:title="@string/action_cart"
+        app:showAsAction="ifRoom" />-->
+
+
+    <!--<item android:id="@+id/action_myAccount" android:title="@string/action_myAccount"
+        android:orderInCategory="100" app:showAsAction="never" />
+    -->
+    <item
+        android:id="@+id/action_myOrder"
+        android:orderInCategory="100"
+        android:title="@string/action_myOrder"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_myWishlist"
+        android:orderInCategory="100"
+        android:title="@string/action_myWishlist"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_login"
+        android:orderInCategory="100"
+        android:title="@string/action_login"
+        android:visible="true"
+        app:showAsAction="never" />
+
+   <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:title="@string/action_logout"
+       android:visible="false"
+        app:showAsAction="never" />
+    <!--<item android:id="@+id/action_sellerLogin" android:title="@string/action_sellerLogin"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_trackOrder" android:title="@string/action_trackOrder"
+        android:orderInCategory="100" app:showAsAction="never" />-->
+
+
+    <item
+        android:id="@+id/action_privacy"
+        android:orderInCategory="100"
+        android:title="@string/action_privacy"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_terms"
+        android:orderInCategory="100"
+        android:title="@string/action_terms"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_contactApp"
+        android:orderInCategory="100"
+        android:title="@string/action_contactus"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_rateApp"
+        android:orderInCategory="100"
+        android:title="@string/action_rateApp"
+        app:showAsAction="never" />
+
+
+</menu>

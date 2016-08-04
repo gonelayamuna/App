@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/loginrelative"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:background="#ffffff"
+
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel_logindialog"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="25dp"
+
+            android:background="@drawable/closebtn20"
+            />
+
+
+
+
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+           android:layout_below="@+id/cancel_logindialog"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Already registered?"
+            android:textStyle="bold"
+
+            android:id="@+id/alreadyregistertext"
+            />
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="LogIn"
+
+            android:textColor="#ffffff"
+            android:background="#CF0A8B"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/cancel_logindialog"
+            android:layout_toRightOf="@+id/alreadyregistertext"
+            android:layout_toEndOf="@+id/alreadyregistertext"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/alreadyregistertext"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="New user?"
+            android:textStyle="bold"
+
+            android:id="@+id/newusertxt"
+            />
+
+        <Button
+            android:id="@+id/signupbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Sign Up"
+
+            android:textColor="#ffffff"
+            android:background="#CF0A8B"
+            android:layout_marginTop="25dp"
+            android:layout_alignLeft="@+id/loginbtn"
+
+            android:layout_below="@+id/loginbtn"
+            android:layout_toRightOf="@+id/newusertxt"
+            android:layout_toEndOf="@+id/newusertxt"
+            />
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

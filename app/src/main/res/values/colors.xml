@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#CF0A8B</color>
+    <color name="colorPrimaryDark">#CF0A8B</color>
+    <color name="colorAccent">#CF0A8B</color>
+    <color name="lightGrey">#bfbfbf</color>
+    <color name="lightviolet">#9F72AD</color>
+    <color name="darkgrey">#515151</color>
+    <color name="white">#ffffff</color>
+
+    <color name="background_color">#CF0A8B</color>
+    <color name="list_head">#CF0A8B</color>
+    <color name="activity_bg">#e4e5e5</color>
+    <color name="lightpink">#EDADE8</color>
+    <color name="text_grey">#A4A9AB</color>
+
+</resources>

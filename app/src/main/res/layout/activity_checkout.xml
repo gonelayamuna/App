@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.user.newtable.CheckoutActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:layout_marginBottom="60dp"
+
+        android:layout_alignParentLeft="true" >
+
+        <RelativeLayout
+            android:id="@+id/relativeheadcheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Already registered?"
+            android:textStyle="normal"
+            android:visibility="visible"
+            android:id="@+id/alreadyregistertext"
+            />
+
+            <Button
+                android:id="@+id/loginbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="LogIn"
+                android:visibility="visible"
+                android:textColor="#ffffff"
+                android:background="#CF0A8B"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/alreadyregistertext"
+                android:layout_toEndOf="@+id/alreadyregistertext"
+                />-->
+
+            <RelativeLayout
+                android:id="@+id/senderrelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f6f6f6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp">
+
+
+            <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="SENDER DETAILS"
+        android:layout_marginTop="25dp"
+        android:textColor="#000000"
+
+        android:id="@+id/senderdetailstext"
+
+        android:layout_marginLeft="25dp"
+
+       />
+
+            <View
+                android:id="@+id/senderviewline"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_below="@+id/senderdetailstext"
+                android:layout_alignLeft="@+id/senderdetailstext"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="8dp"
+                android:background="#CF0A8B" />
+
+
+                <LinearLayout
+                    android:id="@+id/senderlinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/senderviewline"
+                    >
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textinputone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+
+                    >
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/firstnameedittext"
+                    android:padding="10dp"
+                    android:hint="First Name" >
+
+
+                </EditText>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textinputtwo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    >
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lastnameedittext"
+                        android:hint="Last Name"
+                    android:paddingRight="20dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    />
+
+                </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_below="@+id/senderlinear"
+                    android:id="@+id/textinputthree"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/emailedittext"
+                        android:hint="Contact Nos"
+                        android:padding="10dp"
+                        android:maxLength="10"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+              <!--  <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textinputthree"
+                    android:text="Register new account?"
+                    android:id="@+id/checkBox"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                   />
+
+                <LinearLayout
+                    android:id="@+id/senderlineartwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:visibility="gone"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/checkBox"
+                    >
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textinput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+
+                        >
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/passwordedittext"
+                            android:padding="10dp"
+                            android:hint="Password" >
+
+                        </EditText>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textinpu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/confirmpwdedittext"
+                            android:hint="Confirm Password"
+                            android:paddingRight="20dp"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>-->
+
+            </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/shippingrelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/senderrelative"
+            android:background="#f6f6f6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="SHIPPING ADDRESS"
+                android:layout_marginTop="25dp"
+                android:textColor="#000000"
+
+                android:id="@+id/shippingaddresstext"
+
+                android:layout_marginLeft="25dp"
+
+                />
+
+            <View
+                android:id="@+id/shippingviewline"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_below="@+id/shippingaddresstext"
+                android:layout_alignLeft="@+id/shippingaddresstext"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="25dp"
+                android:background="#CF0A8B" />
+
+
+            <LinearLayout
+                android:id="@+id/shippinglinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/shippingviewline"
+                android:baselineAligned="false">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/shippingtextinputone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+
+                    >
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shippingfirstnameedittext"
+                        android:singleLine="true"
+                        android:padding="10dp"
+
+                        android:hint="First Name"
+
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/shippingtextinputtwo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shippinglastnameedittext"
+                        android:hint="Last Name"
+                        android:paddingRight="20dp"
+                        android:padding="10dp"
+
+                        android:singleLine="true"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shippinglinearaddrsandcity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/shippinglinear"
+                android:baselineAligned="false">
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/shippingtextinputthree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shippingemailedittext"
+                    android:hint="Address"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/shippingtextinputfour"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    >
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shippingcityedittext"
+                        android:hint="City"
+                        android:paddingRight="20dp"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:inputType="text"
+
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shippinglineartwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/shippinglinearaddrsandcity"
+                android:baselineAligned="false">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/shippingtextinputfive"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shippingstateedittext"
+                        android:hint="State"
+                        android:paddingRight="20dp"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:inputType="text"
+
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/shippingtextinputcountry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shippingcountryedittext"
+                        android:hint="Country"
+                        android:paddingRight="20dp"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shippinglinearthree"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/shippinglineartwo"
+                android:baselineAligned="false">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/shippingtextinputsix"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+
+                    >
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shippingpincodeedittext"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:hint="Pin Code"
+
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/shippingtextinputseven"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shippingmobilenosedittext"
+                        android:hint="Contact Nos"
+                        android:paddingRight="20dp"
+                        android:padding="10dp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/shipmethodrelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shippingrelative"
+            android:background="#f6f6f6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="SHIPPING METHOD"
+                android:layout_marginTop="25dp"
+                android:textColor="#000000"
+                android:id="@+id/shipmethodtext"
+                android:layout_marginLeft="25dp"
+
+                />
+
+            <View
+                android:id="@+id/shipmethodviewline"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_below="@+id/shipmethodtext"
+                android:layout_alignLeft="@+id/shipmethodtext"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="25dp"
+                android:background="#CF0A8B" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Free Shipping"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000"
+                android:layout_below="@+id/shipmethodviewline"
+                android:id="@+id/freeshippingtext"
+                android:layout_marginLeft="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/free"
+                android:hint="Free"
+                android:paddingRight="20dp"
+                android:padding="10dp"
+                android:layout_below="@+id/freeshippingtext"
+                android:layout_alignLeft="@+id/freeshippingtext"
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Gift options for the entire order"
+                android:layout_marginTop="12dp"
+                android:textColor="#000000"
+                android:layout_below="@+id/free"
+                android:id="@+id/giftoptionstext"
+                android:layout_marginLeft="25dp" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/shippinglinearfour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/giftoptionstext"
+                android:baselineAligned="false">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/shippingtextinputeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+
+                    >
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fromedittext"
+                        android:singleLine="true"
+                        android:padding="10dp"
+                        android:hint="From"
+
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/shippingtextinputnine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toedittext"
+                        android:hint="To"
+                        android:paddingRight="20dp"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="25dp"
+                android:layout_below="@+id/shippinglinearfour"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Suggestions"
+                android:layout_marginTop="12dp"
+                android:textColor="#000000"
+                android:layout_below="@+id/spinner"
+                android:id="@+id/suggestionstext"
+                android:layout_marginLeft="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/commentedittext"
+                android:hint="Leave a message"
+                android:gravity="top"
+                android:minLines="5"
+                android:layout_marginTop="12dp"
+               android:layout_marginRight="25dp"
+                android:background="@drawable/shape"
+                android:layout_below="@+id/suggestionstext"
+                android:layout_alignLeft="@+id/suggestionstext"
+                android:maxLines="15"
+                android:paddingLeft="10dp"
+
+                />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/paymentmethodrelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shipmethodrelative"
+            android:background="#f6f6f6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="PAYMENT METHOD"
+                android:layout_marginTop="25dp"
+                android:textColor="#000000"
+                android:id="@+id/paymentmethodtext"
+                android:layout_marginLeft="25dp"
+
+                />
+
+            <View
+                android:id="@+id/paymentmethodviewline"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_below="@+id/paymentmethodtext"
+                android:layout_alignLeft="@+id/paymentmethodtext"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="25dp"
+                android:background="#CF0A8B" />
+
+            <TextView
+                android:id="@+id/paymenttext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#f00e46"
+                android:layout_below="@+id/paymentmethodviewline"
+                android:text="Please specify payment method"
+                android:layout_marginLeft="20dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <RadioGroup
+                android:id="@+id/radiobuttongroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:checked="false"
+                android:layout_below="@+id/paymenttext">
+
+
+                <RadioButton
+                    android:id="@+id/razorpayradiobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:text="   Razorpay"
+                    android:textColor="#003140" />
+                <RadioButton
+                    android:id="@+id/cbdradiobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/razorpayradiobtn"
+                    android:text="   Cash Before Delivery"
+                    android:textColor="#003140" />
+
+                <RadioButton
+                    android:id="@+id/paytmradiobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/cbdradiobtn"
+                    android:text="   Credit Card/Debit Card/NetBanking Payment/Paytm Wallet"
+                    android:textColor="#003140" />
+
+                <RadioButton
+                    android:id="@+id/citruspayradiobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/paytmradiobtn"
+                    android:text="   CitrusPay(Domestic and International Payment"
+                    android:textColor="#003140" />
+
+                <RadioButton
+                    android:id="@+id/mobikwikradiobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/citruspayradiobtn"
+                    android:text="   Mobikwik Wallet(Debit or Credit Card/NetBanking)"
+                    android:textColor="#003140" />
+
+
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f6f6f6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/paymentmethodrelative">
+
+               <!--  <LinearLayout
+            android:id="@+id/reviewlinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#f6f6f6"
+            android:layout_marginTop="15dp">-->
+
+            <Button
+                android:id="@+id/revieworderbutton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="REVIEW YOUR ORDER"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:background="#CF0A8B"
+
+                />
+
+
+                <RelativeLayout
+                    android:id="@+id/reviewlistrelative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/revieworderbutton">
+
+                    <RelativeLayout
+                        android:id="@+id/tablerelativelayout"
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical" >
+
+                        <TableLayout
+                            android:id="@+id/table_main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true" >
+                        </TableLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/relativetwo"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/tablerelativelayout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="SubTotal :"
+                            android:textColor="#000000"
+                            android:textSize="15sp"
+                            android:id="@+id/subtotaltext"
+                            android:layout_marginTop="15dp"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="1098.00"
+                            android:id="@+id/subtotalvaluetext"
+                            android:textColor="#000000"
+                            android:textSize="15sp"
+
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/subtotaltext"
+                            android:layout_alignBaseline="@+id/subtotaltext"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Grand Total :"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:id="@+id/grandtotaltext"
+                            android:layout_below="@+id/subtotaltext"
+                            android:layout_alignRight="@+id/subtotaltext"
+                            android:layout_marginTop="15dp"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="1098.00"
+                            android:id="@+id/grandtotalvaluetext"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/grandtotaltext"
+                            android:layout_alignBaseline="@+id/grandtotaltext"
+                            />
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/editcartbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="6dp"
+                    android:text="EDIT YOUR CART"
+                    android:background="#CF0A8B"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_below="@+id/reviewlistrelative"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#ffffff"
+                   />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="SEND GIFT"
+        android:id="@+id/sendgiftbutton"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="#CF0A8B"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+
+</RelativeLayout>
+
+       <!-- <RelativeLayout
+            android:id="@+id/reviewurordertext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paymentmethodrelative"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="REVIEVE YOUR ORDER"
+                android:layout_marginTop="25dp"
+                android:textColor="#000000"
+
+                android:id="@+id/reviewurordermethodtext"
+
+                android:layout_marginLeft="25dp"
+
+                />
+
+            <View
+                android:id="@+id/reviewviewline"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_below="@+id/reviewurordermethodtext"
+                android:layout_alignLeft="@+id/reviewurordermethodtext"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="25dp"
+
+                android:background="#CF0A8B" />
+
+            <RelativeLayout
+                android:id="@+id/tablerelativelayout"
+                android:layout_width="fill_parent"
+                android:layout_gravity="center"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/reviewviewline"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:id="@+id/table_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" >
+                </TableLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativetwo"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/tablerelativelayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="SubTotal :"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:id="@+id/subtotaltext"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="1098.00"
+                    android:id="@+id/subtotalvaluetext"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/subtotaltext"
+                    android:layout_alignBaseline="@+id/subtotaltext"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Grand Total :"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:id="@+id/grandtotaltext"
+                    android:layout_below="@+id/subtotaltext"
+                    android:layout_alignRight="@+id/subtotaltext"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="1098.00"
+                    android:id="@+id/grandtotalvaluetext"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/grandtotaltext"
+                    android:layout_alignBaseline="@+id/grandtotaltext"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+-->
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastrelativehead"
+        android:layout_alignParentBottom="true"
+        android:background="#000">
+
+
+    </RelativeLayout>-->
+
+   <!-- <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lastrelative"
+
+
+        android:background="#000"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Grand Total :"
+                android:textColor="#ffffff"
+                android:textStyle="normal"
+
+                android:id="@+id/checkoutgrandtotaltext"
+
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1095.00"
+                android:textColor="#ffffff"
+
+                android:id="@+id/checkoutgrandtotalvaluetext"
+                android:layout_toRightOf="@+id/checkoutgrandtotaltext"
+                android:layout_alignBaseline="@+id/checkoutgrandtotaltext"
+                android:layout_marginLeft="20dp"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/lastrelative"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EDIT YOUR CART"
+                android:id="@+id/clearallitembutton"
+
+                android:textColor="#FFFFFF"
+
+                android:textStyle="bold"
+                android:background="#CF0A8B"
+                android:layout_weight="0.2"
+
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEND GIFT"
+                android:id="@+id/updatecartbutton"
+
+                android:textColor="#FFFFFF"
+
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:background="#CF0A8B"
+                android:layout_weight="1"
+
+                />
+
+        </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+

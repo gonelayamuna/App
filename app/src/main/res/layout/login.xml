@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="45dp">
+
+
+    <TextView
+            android:id="@+id/already_registered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already Registered?"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/darkgrey"
+            android:gravity="center"
+
+           />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/login_name_et_textinputlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/login_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:singleLine="true"
+           android:layout_marginTop="40dp"
+            android:inputType="textEmailAddress"
+            android:layout_below="@+id/already_registered"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/login_pwd_et_textinputlayout"
+        android:layout_width="match_parent"
+      android:layout_below="@+id/login_name_et_textinputlayout"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:singleLine="true"
+            android:inputType="textWebPassword"
+            android:layout_below="@+id/login_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+          android:layout_centerInParent="true"
+            android:layout_below="@+id/login_pwd_et_textinputlayout"
+            android:background="@drawable/button_radius"
+
+            />
+
+
+    <TextView
+        android:id="@+id/signuptxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New User? Register Here"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FF0000"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/login_btn"
+        android:layout_centerInParent="true"
+         />
+
+</RelativeLayout>
+
+
+    <!--   <TextView
+           android:id="@+id/textView3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Login With Social Network"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:textColor="@color/darkgrey" />
+-->
+
+   <!-- <com.facebook.login.widget.LoginButton
+                android:id="@+id/fb_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+                android:layout_below="@+id/login_btn" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/fb_login_button"/>-->
+
+   <!-- <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/twitter_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/sign_in_button"
+        android:clickable="true" />-->
+
+
+
+
+
+
+

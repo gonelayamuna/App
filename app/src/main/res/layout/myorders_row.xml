@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Order Id:"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:id="@+id/orderidtxt"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Order Date:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:id="@+id/orderdatetxt"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Total:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/totaltxt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="001"
+        android:textSize="15sp"
+        android:id="@+id/orderidtxtval"
+        android:layout_below="@+id/orderidtxt"
+        android:layout_alignLeft="@+id/orderidtxt"
+        android:layout_alignStart="@+id/orderidtxt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="31/12/2016"
+        android:textSize="15sp"
+        android:id="@+id/orderdatetxtval"
+        android:layout_below="@+id/orderdatetxt"
+        android:layout_alignLeft="@+id/orderdatetxt"
+
+
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="500"
+
+        android:textSize="15sp"
+        android:id="@+id/ordertotaltxtval"
+       android:layout_below="@+id/totaltxt"
+        android:layout_alignLeft="@+id/totaltxt"
+        android:layout_alignStart="@+id/totaltxt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Status:"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/orderstatustxt"
+        android:layout_below="@+id/orderidtxtval"
+        android:layout_alignLeft="@+id/orderidtxtval"
+        android:layout_alignStart="@+id/orderidtxtval" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pending"
+        android:textSize="15sp"
+        android:id="@+id/orderstatustxtval"
+        android:layout_alignTop="@+id/orderstatustxt"
+        android:layout_toRightOf="@+id/orderidtxt"
+        android:layout_toEndOf="@+id/orderidtxt" />
+
+</RelativeLayout>

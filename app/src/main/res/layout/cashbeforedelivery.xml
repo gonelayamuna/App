@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/cashcartrelative"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#ffffff"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel_cbddialog"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/closebtn20"
+            />
+
+
+
+
+
+
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/cancel_cbddialog"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Cash Collection Address"
+            android:textStyle="normal"
+            android:textColor="#000000"
+            android:id="@+id/cashcollectionaddtextvw"
+            />
+
+        <LinearLayout
+            android:id="@+id/nameaddrlinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/cashcollectionaddtextvw"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameedittext"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:enabled="false"
+                android:hint="Name"
+                android:singleLine="true"
+                >
+
+            </EditText>
+
+
+        <EditText
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AddressEditText"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:hint="Address"
+            android:singleLine="true"
+
+            />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/citystatelinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/nameaddrlinear"
+            >
+
+
+          <!--  <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinputone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+
+                >-->
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cityedittext"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:hint="City"
+                    android:singleLine="true"
+                   >
+
+                </EditText>
+
+       <!--     </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinputtwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                >-->
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="State"
+                    android:paddingRight="20dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:id="@+id/stateedittext"
+                    />
+
+          <!--  </android.support.design.widget.TextInputLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/countrypincodelinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/citystatelinear"
+            >
+
+
+            <!--  <android.support.design.widget.TextInputLayout
+                  android:id="@+id/textinputone"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="20dp"
+                  android:layout_weight="1"
+
+                  >-->
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/countryedittext"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:hint="Country"
+                android:singleLine="true"
+                >
+
+
+
+
+            </EditText>
+
+            <!--     </android.support.design.widget.TextInputLayout>
+
+                 <android.support.design.widget.TextInputLayout
+                     android:id="@+id/textinputtwo"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+
+                     >-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pin Code"
+                android:paddingRight="20dp"
+                android:padding="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="6"
+                android:layout_weight="1"
+                android:id="@+id/pinedittext"
+                />
+
+            <!--  </android.support.design.widget.TextInputLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contactnoslinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/countrypincodelinear"
+            >
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Contact Nos"
+                android:inputType="number"
+                android:padding="10dp"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:id="@+id/contactnumberedittext"
+                />
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/savebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Save"
+            android:textColor="#ffffff"
+            android:background="#CF0A8B"
+            android:layout_below="@+id/countrypincodelinear"
+            android:layout_alignRight="@+id/countrypincodelinear"
+            android:layout_marginTop="20dp"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/background_color</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:textAppearance">@style/AppTheme.Widget.TextView</item>
+        <item name="android:fontFamily">fonts/OpenSans-Regular.ttf</item>
+        <item name="android:textColor">#333</item>
+
+    </style>
+
+    <style name="ThemeToolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- <item name="colorControlNormal">#ffffff</item>-->
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
+    <style name="product_name_txt">
+
+        <item name="android:textColor">@color/darkgrey</item>
+
+    </style>
+
+    <style name="product_price_txt">
+
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.Widget.TextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:fontFamily">fonts/OpenSans-Regular.ttf</item>
+    </style>
+
+    <style name="product_availability">
+
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/lightviolet</item>
+        <item name="colorControlActivated">@color/lightGrey</item>
+    </style>
+
+    <style name="myDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="btn_style" parent="@android:style/Widget.Button.Small"></style>
+</resources>

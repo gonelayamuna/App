@@ -1,0 +1,150 @@
+<resources>
+    <string name="app_name">Send My Gift</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="action_rateApp">Rate App</string>
+    <string name="action_contactus">Contact us</string>
+    <string name="action_search">Search</string>
+    <string name="spinner_title">Select weight</string>
+
+    <string name="action_myAccount">My Account</string>
+    <string name="action_myOrder">My Order</string>
+    <string name="action_myWishlist">My Wishlist</string>
+    <string name="action_login">Login</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_sellerLogin">Seller Login</string>
+    <string name="action_trackOrder">Track Order</string>
+
+    <string name="action_share">Share</string>
+    <string name="action_cart">Cart</string>
+    <string name="action_privacy">Privacy Policy</string>
+    <string name="action_terms">Terms &amp; conditions</string>
+
+    <string name="string_category">Flowers \n Gifts\n</string>
+    <string name="string_price">Share</string>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="action_signup">SignUp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="TermsAndCondition">&#8226; Same day delivery orders can be accepted till 4 pm IST on the date of delivery.&lt;br /&gt;
+&#8226; Products will be delivered only in the pin codes mentioned in the List of Serviceable Pin codes.&lt;br /&gt;
+&#8226; We deliver all 365 days of the year (including Sundays and public holidays)&lt;br /&gt;
+&#8226; We guarantee on date delivery but do not commit any fix time for delivery. Deliveries will be made between 7 am to 9 pm IST on the given date. However, we do try our best to fulfill your delivery instructions. Midnight Deliveries will be made between 11:30 PM to 12:30 AM on Mentioned / asked date at an additional cost.&lt;br /&gt;
+&#8226; We believe in providing our customer the best quality. To maintain the freshness, flowers, cakes and other perishable products are sourced locally at the delivery location and are always hand delivered&lt;br /&gt;
+&#8226; Delivery will not be redirected/ redelivered to any other address without extra charges. We will attempt delivery of the items only once. In case the delivery is not executed during the attempt, the customer shall still be charged for the order and no redelivery may be possible. Orders are considered to be executed in the below cases:
+&lt;br /&gt;&lt;br /&gt;
+a. Recipient not available&lt;br /&gt;
+b. Delivery not done due to wrong address.&lt;br /&gt;
+c. Wrong phone or Cell or Extension number/ not working/ no reply or not connecting/ reachable and delivery is not done.&lt;br /&gt;
+d. Recipient refused the products.&lt;br /&gt;
+e. Premises locked.&lt;br /&gt;
+f. Delivered the product at the Gate/ Reception/ Neighbor.&lt;br /&gt;
+
+&lt;br /&gt;&#8226; The image displayed in indicative in nature. Actual product may vary in shape or design as per the availability."
+&lt;br /&gt;&#8226; Images are indicative only. Though we try our level best to deliver as per the image shown, designs may vary &amp; are subject to availability of flowers / consumables on any particular day. We reserve the right to substitute the flowers (Including specified color) / other products with equal or higher value in case of non-availability of the desired product. No refund/ re-delivery claim in this respect will be entertained.
+&lt;br /&gt;&#8226; Freshly baked cakes are available only after 10:30am IST. Please do not insist on early morning cake delivery. We do not deliver earlier days cakes unless insisted by the customer
+&lt;br /&gt;&#8226; Courier items: Courier orders would be shipped all over India within 3-4 working days and we cannot commit exact date of delivery for courier products. No deliveries possible on Sundays and national holidays.
+&lt;br /&gt;&#8226; In case of floods/ Heavy Rains/ Bandh/ Riot or any unavoidable circumstances, we reserve the right to reschedule the delivery for another date.
+&lt;br /&gt;&#8226; On special occasions like Valentinesâ€™ Day, the given prices are not applicable. Please check in our website for special prices, products availability and advance order restrictions.
+&lt;br /&gt;&#8226; Prices of items which are subject to MRP restrictions are being sold on the website after adding up costs of our services, delivery and online transactions cost. The distribution could not be shown separately due to technical restrictions and are taken to be understood.
+&lt;br /&gt;&#8226; No change in instructions can be entertained on the date of delivery unless acknowledged and confirmed in writing by our customer support team.
+Orders once placed cannot be cancelled unless requested 1 working day (before 4 pm.) prior to the delivery date. You can send cancellation request at cs@sendmygift.com. Cancellation charge of INR 100 per order will apply.
+&lt;br /&gt;&#8226; In case of outsourced gift items, respective brand owners will be responsible for the quality of product.
+&lt;br /&gt;&#8226; Because of the perishable nature of most products and in order to assist us in resolving any complaints quickly and to our mutual satisfaction, we advise you to make any complaint within 1 working day of the date of delivery or intended delivery of your purchase.
+&lt;br /&gt;&#8226; We will not entertain any complaint of any order after 24 hours from the date of delivery of the order.
+&lt;br /&gt;&#8226; Send my Gift follows a policy of free re-delivery in case of any genuine complaint raised by the buyer. Genuine cases include delivery at wrong address or date, and/or delivery of stale perishable items.
+&lt;br /&gt;&#8226; Delivery of certain branded items may not be possible/delayed under certain un-controllable circumstances such as product not available in the market or discontinued by the manufacturer. In such cases, similar product, nearest to the description and price shall be delivered.
+&lt;br /&gt;&lt;br /&gt;
+<b>General Disclaimers:</b>&lt;br /&gt;
+
+1. Send my Gift retains the right to refuse any order unconditionally.&lt;br /&gt;
+2. All claims are subject to the jurisdiction of Court at Bangalore, India only.&lt;br /&gt;
+3. If Send my Gift is unable to deliver your order, then complete refund will be made. We shall not be liable for any other charges, loss of profits, emotional stress or any other liability etc. caused due to non-delivery.&lt;br /&gt;
+4. Send my Gift reserves the right to change the price or withdraw any product at any point of time at its own discretion without any notice.&lt;br /&gt;
+5. Send my Gift has taken every care for the accuracy of the information provided in the website. It has exercised due diligence in providing the latest products/information. However, Send my Gift or its employees or its affiliates are not responsible for the loss or damage caused to any of the users due to the information inadvertently provided/not provided in the website.
+&lt;br /&gt;6. In case of any confusion about the delivery address or in case our delivery boy is unable to locate the address, we reserve the right to call the recipient at the given phone number .
+&lt;br /&gt;7. All rights are reserved. No portion of this website may be reproduced in any form without the written consent of Send my Gift.
+&lt;br /&gt;8.<b>Authenticity of information &amp; interest of making payments:</b>
+&lt;br /&gt;
+&lt;br /&gt;a. The customer promises that the information provided to Send my Gift is true, correct and accurate. The customer also agrees to pay all charges incurred by them and users of your account and credit cards or other payment mention at prices in effect when such charges are incurred.
+&lt;br /&gt;b. The customer agrees to defend indemnity &amp; hold Send my Gift and its affiliates harmless from all liabilities &amp; expenses including attorneyâ€™s fee related to any violation of this agreement by them and also for the use of the services or transmission of any message or information by them. Send my Gift may modify this agreement from time to time without giving any prior information.</string>
+    &lt;br /&gt;
+
+     <string name="privacy"><b></b>\n
+
+All the information you enter on our site is confidential. We do not sell your information nor do we share it with anyone. We are a family owned and operated business with the highset degree of integrity. Your information is safe with us. We respect your concern over your right to privacy, for a secure online shopping experience. By visiting any website operated by the association (collectively referred to as the "Site"), you are accepting the practices described in this Privacy Policy.\n
+\n
+<b>INFORMATION COLLECTED WHILE SURFING OUR WEBSITE</b>\n
+
+The information we capture from users of our site, allows us to personalize and continually improve your online experience, making it easier and more enjoyable. The information we collect is as below :\n
+\n
+<b>Automated Information</b>\n
+We receive and store certain type of information whenever you interact with us.
+For example, like many Web sites, we use "cookies," and we obtain certain types of information when your web browser accesses our site. Cookies are pieces of data your web browser stores on your hard drive to enable our systems to recognize your browser. Most web browsers automatically accept cookies, but most allow you to instruct your browser to prevent the use of cookies. However, if you disable this feature, certain aspects of our site, such as the shopping basket, will not function properly.\n
+\n
+<b>Information you share with us</b>\n
+We receive and store all the information you enter on the site which is automated, or share with us on the call, email and chat.
+For example, when you order from the site, we collect the following information: your name, telephone number, email address, billing information (credit card number, expiry date and billing address), products purchased, and the recipient´s name, address and telephone number.\n
+\n
+<b>Note:</b> In some cases, the recipient may be contacted via telephone to schedule delivery. Also, if you register as a member, we request your name, address, phone number, email address and other information as set forth in the membership form. You can choose not to provide certain information, but then you might not be able to take advantage of many of the features of the Site. We use the information that you provide for such purposes as responding to your requests, processing your orders and communicating with you.\n
+\n
+<b>Information from Other Sources</b>\n
+For reasons such as improving personalization of our service, we might receive information about you from other sources and add it to our account information.\n
+\n
+<b>Does We Share The Information It Receives?</b>\n
+\n
+We do not sell, trade or rent personally identifiable information that visitors submit to our Site.
+\n
+        \n
+We may utilize your personally identifiable information to send you information or materials we think you will find interesting. However, at the time of collection, you will typically have the option of instructing us not to send you additional information or share your personal information with business partners or advertisers. We are not responsible for the privacy policies or practices of our advertisers or business partners and encourages you to read the posted privacy statement and user terms and conditions whenever interacting with, and prior to providing any personal information to, any other Web site.
+\n
+        \n
+We may use reputable third parties to manage activities available on our Site including Web hosting, database management and order processing and authentication. These parties may have access to personally identifiable information submitted by visitors who participate in those activities. We instructs these third parties to use personally identifiable information only for the specific purpose for which it is collected, and not to sell, market or transfer such information to other entities except as needed to provide the designated services.\n
+\n
+<b>How Secure Is Information About Me?</b>\n
+\n
+We maintains appropriate safeguards to ensure the security, integrity and privacy of personally identifiable information submitted to our sites, and periodically reviews and updates its security measures in light of current technologies. Unfortunately, no data transmission over the Internet can be guaranteed to be totally secure. Although the we strives to protect your personal information, we cannot ensure or warranty the security of any information you may transmit to us or from our online products and services. Once we do receive your transmission, however, we make our best effort to ensure its security on our systems. We use VeriSign as our SSL (Secure Socket Layer) digital certificate provider, providing our customers the strongest certificate services available. When credit card information is transmitted, industry standard encryption is used.\n
+\n
+<b>About Children</b>\n
+\n
+We are concerned about the safety of children when they use the Internet. Pursuant to the ChildrenÂ´s Online Protection Act of 1998, the Association will never knowingly request personally identifiable information from anyone under the age of 13 without prior verifiable parental consent.
+\n
+        \n
+<b>Links to Third Party and Co-Branded Sites</b>\n
+\n
+We may have and continues to establish relationships with other Web sites that allow visitors to the Site to link directly to these third party Web sites. However, we are not responsible for the privacy practices and content of these third party Web sites. When interacting with any third party site, we encourage you to read the posted privacy statement and user terms and conditions whenever interacting with, and prior to providing any personal information to, any the third party Web site.</string>
+
+
+    <string name="facebook_appId">1761176084102568</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <string name="order_id">Order Id : </string>
+    <string name="customer_id">Customer Id : </string>
+    <string name="transaction_amount">Transaction Amount : </string>
+    <string name="channel_id">Channel Id : </string>
+    <string name="industry_type_id">Industry Type Id : </string>
+    <string name="website">Website : </string>
+    <string name="theme">Theme : </string>
+    <string name="cust_email_id">Email Id : </string>
+    <string name="cust_mobile_no">Mobile Number : </string>
+    <string name="merchant_id">Merchant Id : </string>
+    <string name="checksum_generation_url">Checksum Generation URL : </string>
+    <string name="checksum_verification_url">Checksum Verification URL : </string>
+    <string name="start_transaction">Start Transaction</string>
+    <string name="sample_order_id">ORDER</string>
+    <string name="sample_customer_id">CUST23657</string>
+    <string name="sample_transaction_amount">1</string>
+    <string name="sample_channel_id">WAP</string>
+    <string name="sample_industry_type_id">Retail</string>
+    <string name="sample_website">worldpressplg</string>
+    <string name="sample_theme">merchant</string>
+    <string name="sample_cust_email_id">abc@gmail.com</string>
+    <string name="sample_cust_mobile_no">123</string>
+    <string name="sample_merchant_id_staging">DIY12386817555501617</string>
+    <string name="sample_checksum_generation_url">https://pguat.paytm.com/merchant-chksum/ChecksumGenerator</string>
+    <string name="sample_checksum_verification_url">https://pguat.paytm.com/merchant-chksum/ValidateChksum</string>
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/review_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relative_more_2"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/pink_bg_border"
+        android:gravity="center"
+
+        android:padding="15dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Alert!"
+
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/review_submit_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/tableRating"
+            android:layout_alignEnd="@+id/tableRating"
+            android:layout_alignRight="@+id/tableRating"
+            android:background="@drawable/closebtn20" />
+
+
+        <TableLayout
+            android:id="@+id/tableRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView20"
+            android:layout_alignStart="@+id/textView20"
+            android:layout_below="@+id/textView20"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="15dp"
+            android:background="#A0A1A3"
+            android:stretchColumns="*">
+
+        </TableLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rating_pinkDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/textView20"
+            android:layout_alignStart="@+id/textView20"
+            android:layout_below="@+id/tableRating"
+            android:layout_margin="8dp"
+            android:orientation="vertical"></LinearLayout>
+
+        <TextView
+            android:id="@+id/howTorateTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rating_pinkDivider"
+            android:layout_centerHorizontal="true"
+            android:text="HOW DO YOU RATE THIS PRODUCT"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutRatebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/howTorateTXT"
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/ratingTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="Rating:"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <RatingBar
+                android:id="@+id/review_submit_ratebar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/ratingTXT"
+                android:layout_toRightOf="@+id/ratingTXT" />
+
+        </RelativeLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayoutRatebar"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/review_sub_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:hint="*Let us know your thoughts"
+                android:inputType="textMultiLine"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/sumit_mandratory_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_review"
+            android:layout_marginTop="5dp"
+            android:text="*This is a required field"
+            android:textColor="#FF0000"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/submit_review_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/background_color"
+            android:text="Ok"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/sumit_mandratory_msg"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/submit_rating_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/howTorateTXT"
+            android:layout_marginLeft="100dp"
+           android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:text="Your not logged in"
+            android:textSize="14sp"/>
+
+
+        <!--  <TextView
+              android:id="@+id/submit_rating_alert"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Please select one of each of the ratings above"
+              android:textColor="#FF0000"
+              android:textSize="14sp"
+              android:visibility="invisible"
+              android:layout_marginTop="10dp"
+              android:layout_below="@+id/howTorateTXT"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentStart="true" />-->
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ORDER ID:"
+        android:id="@+id/orderidpaytmtxtvw"
+        android:layout_marginTop="76dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/wanttoproceedpaytmtxtvw"
+        android:layout_alignStart="@+id/wanttoproceedpaytmtxtvw" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="10000001"
+        android:textColor="#000"
+        android:textSize="17sp"
+        android:id="@+id/orderidpaytmvaltxtvw"
+        android:layout_alignTop="@+id/orderidpaytmtxtvw"
+        android:layout_toRightOf="@+id/orderidpaytmtxtvw"
+        android:layout_toEndOf="@+id/orderidpaytmtxtvw"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="AMOUNT:"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:id="@+id/amtpaytmtxtvw"
+        android:layout_below="@+id/orderidpaytmtxtvw"
+        android:layout_alignLeft="@+id/orderidpaytmtxtvw"
+        android:layout_alignStart="@+id/orderidpaytmtxtvw" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="500"
+        android:textColor="#000"
+        android:textSize="17sp"
+        android:id="@+id/amtpaytmvaltxtvw"
+        android:layout_alignTop="@+id/amtpaytmtxtvw"
+        android:layout_alignLeft="@+id/orderidpaytmvaltxtvw"
+        android:layout_alignStart="@+id/orderidpaytmvaltxtvw" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Do you want to proceed payment? "
+        android:textColor="#000"
+        android:id="@+id/wanttoproceedpaytmtxtvw"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/amtpaytmtxtvw"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROCEED"
+        android:id="@+id/proceedpaytmbtn"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:background="#CF0A8B"
+        android:layout_below="@+id/wanttoproceedpaytmtxtvw"
+        android:layout_alignRight="@+id/amtpaytmvaltxtvw"
+        android:layout_alignEnd="@+id/amtpaytmvaltxtvw" />
+</RelativeLayout>
