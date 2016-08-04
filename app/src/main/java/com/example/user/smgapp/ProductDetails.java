@@ -28,6 +28,7 @@ import android.view.ContextThemeWrapper;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -179,8 +180,11 @@ public class ProductDetails extends NavigationDrawer {
     String datestr, timestr;
     TextView file_chosen_stat;
     String imageName;
-    ;
+    Menu menu;
+
    EditText date_edit_txt, time_edit_txt;
+    private boolean inBed = false;
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -238,6 +242,7 @@ public class ProductDetails extends NavigationDrawer {
         scroll = (ScrollView) findViewById(R.id.scroll);
 
         prefs = ProductDetails.this.getSharedPreferences(MyPREFERENCES, 0);
+        updateMenuTitles();
         //1)key=Name and 2)key=Emailid 3)key=Phonenos
         //loginboolean = prefs.getBoolean("loginlogoutkey", false);
         firstnamestr = prefs.getString("firstname", "");
@@ -1085,12 +1090,12 @@ public class ProductDetails extends NavigationDrawer {
 */
 
 
-    @Override
+  /*  @Override
     protected void onRestart() {
         super.onRestart();
         finish();
         startActivity(getIntent());
-    }
+    }*/
 
     private void AddToCartVolleyApi() {
 
@@ -2743,6 +2748,7 @@ public class ProductDetails extends NavigationDrawer {
         }
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -2751,4 +2757,14 @@ public class ProductDetails extends NavigationDrawer {
         getMenuInflater().inflate(R.menu.custom_toolbar_menu, menu);
         return true;
     }
+    private void updateMenuTitles() {
+        MenuItem bedMenuItem = menu.findItem(R.id.action_login);
+        if (inBed) {
+            bedMenuItem.setTitle("Login");
+        } else {
+            bedMenuItem.setTitle("Logout");
+        }
+    }
+
+
 }
