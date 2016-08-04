@@ -242,7 +242,7 @@ public class ProductDetails extends NavigationDrawer {
         scroll = (ScrollView) findViewById(R.id.scroll);
 
         prefs = ProductDetails.this.getSharedPreferences(MyPREFERENCES, 0);
-        updateMenuTitles();
+        //updateMenuTitles();
         //1)key=Name and 2)key=Emailid 3)key=Phonenos
         //loginboolean = prefs.getBoolean("loginlogoutkey", false);
         firstnamestr = prefs.getString("firstname", "");
