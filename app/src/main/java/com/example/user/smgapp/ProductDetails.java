@@ -105,7 +105,7 @@ public class ProductDetails extends NavigationDrawer {
     String cityfromdb;
     String price;
     ProgressDialog pdia;
-     String sizestr,weightstr,flavourstr,colstr;
+    String sizestr, weightstr, flavourstr, colstr;
     //ProgressDialog pDialog;
     String p_id, p_sku, p_name, p_img, p_price, p_description, special_price, product_price_single_txt;
     TextView tv_pName, tv_pPrice, tv_pDescriptn, tv_pPrice_strikeout, salesPkg_des, tv_product_price_single_txt;//, product_name_add_details, sku_txt_value
@@ -182,7 +182,7 @@ public class ProductDetails extends NavigationDrawer {
     String imageName;
     Menu menu;
 
-   EditText date_edit_txt, time_edit_txt;
+    EditText date_edit_txt, time_edit_txt;
     private boolean inBed = false;
 
 
@@ -233,7 +233,7 @@ public class ProductDetails extends NavigationDrawer {
         txt12 = (TextView) findViewById(R.id.textView12);
         txt20 = (TextView) findViewById(R.id.textView20);
         textView4 = (TextView) findViewById(R.id.textView4);
-        file_chosen_stat= (TextView) findViewById(R.id.file_chosen_stat);
+        file_chosen_stat = (TextView) findViewById(R.id.file_chosen_stat);
         txt7.setTypeface(face);
         txt10.setTypeface(face);
         txt12.setTypeface(face);
@@ -257,7 +257,7 @@ public class ProductDetails extends NavigationDrawer {
         time_edit_txt = (EditText) findViewById(R.id.in_time);
 
         timebtn = (Button) findViewById(R.id.btn_time);
-        image_upload= (Button) findViewById(R.id.image_upload_btn);
+        image_upload = (Button) findViewById(R.id.image_upload_btn);
 
         image_upload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -401,8 +401,8 @@ public class ProductDetails extends NavigationDrawer {
         table_det_pg_price = (TableLayout) findViewById(R.id.table_det_pg);
         tv_pincode = (EditText) findViewById(R.id.tv_det_pincode);
 
-      //  tv_pincode.setEnabled(false);
-      //  timebtn.setEnabled(false);
+        //  tv_pincode.setEnabled(false);
+        //  timebtn.setEnabled(false);
         //datebtn.setEnabled(false);
 
         if (delivryCity.getText().toString().isEmpty() || delivryCity.getText().toString().equals("")) {
@@ -423,11 +423,10 @@ public class ProductDetails extends NavigationDrawer {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
 
-              //  if (delivryCity.getText().toString().length() >0) {
+                //  if (delivryCity.getText().toString().length() >0) {
 
                 if (delivryCity.getText().toString().length() >= autocompletelength) {
                     tv_pincode.setEnabled(true);
-
 
 
                 } else {
@@ -453,91 +452,84 @@ public class ProductDetails extends NavigationDrawer {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
 
 
-                   // tv_pincode.requestFocus();
-                   // tv_pincode.setFocusable(true);
+                // tv_pincode.requestFocus();
+                // tv_pincode.setFocusable(true);
                 pincode_validatn_txt.setText("Enter pincode based on city..!");
                 pincode_validatn_txt.setTextColor(Color.parseColor("#B57EDC"));
-                    addTocart.setVisibility(View.VISIBLE);
-                    bluraddtocart.setVisibility(View.GONE);
-                     timebtn.setEnabled(false);
-                    time_edit_txt.setText("");
+                addTocart.setVisibility(View.VISIBLE);
+                bluraddtocart.setVisibility(View.GONE);
+                timebtn.setEnabled(false);
+                time_edit_txt.setText("");
 
-                if(tv_pincode.getText().toString().length() >= maxlen&&(delivryCity.getText().toString().length()==0 )){
-                   // Toast.makeText(ProductDetails.this, "Select the city first", Toast.LENGTH_SHORT).show();
+                if (tv_pincode.getText().toString().length() >= maxlen && (delivryCity.getText().toString().length() == 0)) {
+                    // Toast.makeText(ProductDetails.this, "Select the city first", Toast.LENGTH_SHORT).show();
                     pincode_validatn_txt.setText("Select the city first!");
                     pincode_validatn_txt.setTextColor(Color.parseColor("#DC143C"));
-                }
-
-                  else  if (tv_pincode.getText().toString().length() >= maxlen) {
+                } else if (tv_pincode.getText().toString().length() >= maxlen) {
                     pincodestr = tv_pincode.getText().toString();
                     cityfromdb = controller.getSingleCityEntry(pincodestr);
 
                     SingletonActivity.pincode = pincodestr;
 
 
-                if (autocompletetext.equals(cityfromdb) && (delivryCity.getText().toString().length() >= autocompletelength)&&(tv_pincode.getText().toString().length()>5)) {
+                    if (autocompletetext.equals(cityfromdb) && (delivryCity.getText().toString().length() >= autocompletelength) && (tv_pincode.getText().toString().length() > 5)) {
 
-               //         if (autocompletetext.equals(cityfromdb))  {
+                        //         if (autocompletetext.equals(cityfromdb))  {
 
-                       // Toast.makeText(ProductDetails.this, "this city is serviceable", Toast.LENGTH_SHORT).show();
-                    pincode_validatn_txt.setText("Serviceable!");
-                    pincode_validatn_txt.setTextColor(Color.parseColor("#8F00FF"));
-                    delvry_validatn_txt.setText("Serviceable!");
-                    delvry_validatn_txt.setTextColor(Color.parseColor("#8F00FF"));
+                        // Toast.makeText(ProductDetails.this, "this city is serviceable", Toast.LENGTH_SHORT).show();
+                        pincode_validatn_txt.setText("Serviceable!");
+                        pincode_validatn_txt.setTextColor(Color.parseColor("#8F00FF"));
+                        delvry_validatn_txt.setText("Serviceable!");
+                        delvry_validatn_txt.setTextColor(Color.parseColor("#8F00FF"));
 
-                    if(is_perishable.equals("1")){
-                        datebtn.setEnabled(true);
-                        datebtn.setBackgroundColor(Color.parseColor("#CF0A8B"));
+                        if (is_perishable.equals("1")) {
+                            datebtn.setEnabled(true);
+                            datebtn.setBackgroundColor(Color.parseColor("#CF0A8B"));
 
-                        if(date_edit_txt.getText().toString().length()>0&&time_edit_txt.getText().toString().length()>0){
+                            if (date_edit_txt.getText().toString().length() > 0 && time_edit_txt.getText().toString().length() > 0) {
+                                addTocart.setVisibility(View.VISIBLE);
+                                bluraddtocart.setVisibility(View.GONE);
+                            } else {
+                                addTocart.setVisibility(View.GONE);
+                                bluraddtocart.setVisibility(View.VISIBLE);
+                            }
+
+
+                        } else {
+                            timebtn.setEnabled(false);
+                            datebtn.setEnabled(false);
                             addTocart.setVisibility(View.VISIBLE);
                             bluraddtocart.setVisibility(View.GONE);
+
                         }
-                        else {
-                            addTocart.setVisibility(View.GONE);
-                            bluraddtocart.setVisibility(View.VISIBLE);
-                        }
-
-
-                    }
-
-                    else {
-                        timebtn.setEnabled(false);
-                        datebtn.setEnabled(false);
-                        addTocart.setVisibility(View.VISIBLE);
-                        bluraddtocart.setVisibility(View.GONE);
-
-                    }
-
 
 
                     } else {
-                       // Toast.makeText(ProductDetails.this, "wrong pincode..", Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(ProductDetails.this, "wrong pincode..", Toast.LENGTH_SHORT).show();
                         addTocart.setVisibility(View.GONE);
                         bluraddtocart.setVisibility(View.VISIBLE);
                         timebtn.setEnabled(false);
                         time_edit_txt.setText("");
                         datebtn.setEnabled(false);
                         date_edit_txt.setText("");
-                    pincode_validatn_txt.setText("wrong pincode!");
-                    pincode_validatn_txt.setTextColor(Color.parseColor("#DC143C"));
-                    timebtn.setBackgroundColor(Color.parseColor("#EDADE8"));
-                    datebtn.setBackgroundColor(Color.parseColor("#EDADE8"));
+                        pincode_validatn_txt.setText("wrong pincode!");
+                        pincode_validatn_txt.setTextColor(Color.parseColor("#DC143C"));
+                        timebtn.setBackgroundColor(Color.parseColor("#EDADE8"));
+                        datebtn.setBackgroundColor(Color.parseColor("#EDADE8"));
 
                     }
+                } else {
+
+                    addTocart.setVisibility(View.GONE);
+                    bluraddtocart.setVisibility(View.VISIBLE);
+                    timebtn.setEnabled(false);
+                    time_edit_txt.setText("");
+                    datebtn.setEnabled(false);
+                    date_edit_txt.setText("");
+                    timebtn.setBackgroundColor(Color.parseColor("#EDADE8"));
+                    datebtn.setBackgroundColor(Color.parseColor("#EDADE8"));
                 }
-                    else {
-
-                        addTocart.setVisibility(View.GONE);
-                        bluraddtocart.setVisibility(View.VISIBLE);
-                        timebtn.setEnabled(false);
-                        time_edit_txt.setText("");
-                        datebtn.setEnabled(false);
-                        date_edit_txt.setText("");
-                    timebtn.setBackgroundColor(Color.parseColor("#EDADE8"));
-                    datebtn.setBackgroundColor(Color.parseColor("#EDADE8"));
-                    }
-                  //  return true;
+                //  return true;
 
 
                 return false;
@@ -779,43 +771,6 @@ public class ProductDetails extends NavigationDrawer {
         addTocart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //   if (is_perishable.equals("1")) {
-               /* if (gift_it.getVisibility() == View.VISIBLE) {
-
-                    show_hide.setVisibility(View.VISIBLE);
-                    gift_it.setVisibility(View.GONE);
-
-                }
-*/
-              /* else if (delivryCity.getText().toString().isEmpty() || delivryCity.getText().toString().equals("")) {
-                    // Toast.makeText(ProductDetails.this,"Choose delivery city..!",Toast.LENGTH_SHORT).show();
-                    delivryCity.requestFocus();
-                    delvry_validatn_txt.setVisibility(View.VISIBLE);
-                    delvry_validatn_txt.setText("Choose delivery city..!");
-
-
-                }
-
-                else if (tv_pincode.getText().toString().equals("") && (!delivryCity.getText().toString().equals(""))) {
-                    tv_pincode.setEnabled(true);
-                    txt_pincode_alert.setVisibility(View.VISIBLE);
-                    delvry_validatn_txt.setText("");
-
-                    txt_pincode_alert.setText("Enter pincode based on city");
-                }
-
-                else if(autocompletetext.equals(cityfromdb)) {
-
-                    Toast.makeText(ProductDetails.this, "wrong pincode", Toast.LENGTH_SHORT).show();
-                    *//*if (autocompletetext.equals(cityfromdb)) {
-                        //Toast.makeText(CartActivity.this, "this city is serviceable", Toast.LENGTH_SHORT).show();
-                        Intent intent1 = new Intent(ProductDetails.this, CheckoutActivity.class);
-                        startActivity(intent1);
-                    } else {
-                        Toast.makeText(ProductDetails.this, "wrong pincode", Toast.LENGTH_SHORT).show();
-                    }*//*
-                }*/
-
 
                 if (loginboolean == false) {
 
@@ -836,6 +791,7 @@ public class ProductDetails extends NavigationDrawer {
                             mDialog.dismiss();
                             Intent intent = new Intent(ProductDetails.this, Login.class);
                             startActivity(intent);
+
 
                         }
                     });
@@ -861,6 +817,7 @@ public class ProductDetails extends NavigationDrawer {
                     });
 
                     mDialog.show();
+
 
                 } else {
 
@@ -895,7 +852,7 @@ public class ProductDetails extends NavigationDrawer {
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-    private void selectImage(){
+    private void selectImage() {
         //open album to select image
         Intent gallaryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(gallaryIntent, RESULT_SELECT_IMAGE);
@@ -908,19 +865,19 @@ public class ProductDetails extends NavigationDrawer {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == RESULT_SELECT_IMAGE && resultCode == RESULT_OK && data != null){
+        if (requestCode == RESULT_SELECT_IMAGE && resultCode == RESULT_OK && data != null) {
             //set the selected image to image variable
             Uri image = data.getData();
 
 
-                String s = getRealPathFromURI(image);
+            String s = getRealPathFromURI(image);
 
             File f = new File(s);
 
-             imageName = f.getName();
-           SingletonActivity.image_name=imageName;
-            Log.e("image name...","image name.."+SingletonActivity.image_name);
-            Log.e("path..","path.."+s+"\t"+imageName);
+            imageName = f.getName();
+            SingletonActivity.image_name = imageName;
+            Log.e("image name...", "image name.." + SingletonActivity.image_name);
+            Log.e("path..", "path.." + s + "\t" + imageName);
             file_chosen_stat.setText(SingletonActivity.image_name);
 
 
@@ -928,12 +885,12 @@ public class ProductDetails extends NavigationDrawer {
             Long tsLong = System.currentTimeMillis() / 1000;
             timestamp = tsLong.toString();
 
-            Toast.makeText(getApplicationContext(),timestamp,Toast.LENGTH_SHORT).show();
+           // Toast.makeText(getApplicationContext(), timestamp, Toast.LENGTH_SHORT).show();
         }
     }
 
     public String getRealPathFromURI(Uri uri) {
-        String[] projection = { MediaStore.Images.Media.DATA };
+        String[] projection = {MediaStore.Images.Media.DATA};
         @SuppressWarnings("deprecation")
         Cursor cursor = managedQuery(uri, projection, null, null, null);
         int column_index = cursor
@@ -941,67 +898,6 @@ public class ProductDetails extends NavigationDrawer {
         cursor.moveToFirst();
         return cursor.getString(column_index);
     }
-   /* public  void removeFromwishList() {
-
-
-        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
-                remove_wishList_url, null, new Response.Listener<JSONObject>() {
-
-            @Override
-            public void onResponse(JSONObject response) {
-
-
-                try {
-                    String name = response.getString("responseCode");
-                    int response_code=Integer.parseInt(name);
-                    Log.e("response code...","dlt response code.."+response_code);
-
-                    Log.e("deleted from wishlist","deleted from wish list");
-
-                    String message=response.getString("msg");
-                   *//* if (message.contains("Removed Product From Wishlist Successfully")){
-
-
-                    }*//*
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                VolleyLog.d("Request", "Error: " + error.getMessage());
-
-
-            }
-        }) {
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> headers = new HashMap<String, String>();
-                headers.put("Content-Type", "application/json");
-                return headers;
-            }
-
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<String, String>();
-
-                return params;
-            }
-        };
-
-        GlobalClass.getInstance().addToRequestQueue(jsonObjReq);
-    }
-*/
-
-
-  /*  @Override
-    protected void onRestart() {
-        super.onRestart();
-        finish();
-        startActivity(getIntent());
-    }*/
 
     private void AddToCartVolleyApi() {
 
@@ -1012,12 +908,12 @@ public class ProductDetails extends NavigationDrawer {
 
 
         // SingletonActivity.custidstr = "112";
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, SingletonActivity.API_URL + "api/add_to_cart.php?product_id=" + passed_id + "&&quantity=" + 1 + "&&customer_id=" + SingletonActivity.custidstr + "select_ship_label=" + selectshiplabelstr + "&&time=" + timeparam + "&&pin=" + pincodestr + "&&city=" + autocompletetext + "&&date=" + datestr + "&&size=" +sizestr+ "&&color=" + colstr + "&&flavour=" + flavourstr + "&&weight=" +weightstr,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, SingletonActivity.API_URL + "api/add_to_cart.php?product_id=" + passed_id + "&&quantity=" + 1 + "&&customer_id=" + SingletonActivity.custidstr + "select_ship_label=" + selectshiplabelstr + "&&time=" + timeparam + "&&pin=" + pincodestr + "&&city=" + autocompletetext + "&&date=" + datestr + "&&size=" + sizestr + "&&color=" + colstr + "&&flavour=" + flavourstr + "&&weight=" + weightstr,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
-                       // Toast.makeText(ProductDetails.this,response , Toast.LENGTH_LONG).show();
+                        // Toast.makeText(ProductDetails.this,response , Toast.LENGTH_LONG).show();
                         pdia.dismiss();
 
                         System.out.println("URL OF ADD TO CART IS----" + SingletonActivity.API_URL + "api/add_to_cart.php?product_id=" + passed_id + "&&quantity=" + 1 + "&&customer_id=" + SingletonActivity.custidstr);
@@ -1053,10 +949,10 @@ public class ProductDetails extends NavigationDrawer {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(ProductDetails.this, error.toString(), Toast.LENGTH_LONG).show();
-                          pdia.dismiss();
+                        pdia.dismiss();
                         //  pBar.setVisibility(View.INVISIBLE);
                     }
-                }){
+                }) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
@@ -1652,10 +1548,9 @@ public class ProductDetails extends NavigationDrawer {
             pBar.setVisibility(View.INVISIBLE);
             Log.d("inside", "post");
             Picasso.with(ProductDetails.this).load(p_img).into(im_pImage);
-            if (eggless==true){
+            if (eggless == true) {
                 eggless_checkbox.setVisibility(View.VISIBLE);
-            }
-            else {
+            } else {
                 eggless_checkbox.setVisibility(View.INVISIBLE);
             }
             if (is_wislist.equals("null") || is_wislist.contains("null") || is_wislist.isEmpty()) {
@@ -1679,7 +1574,6 @@ public class ProductDetails extends NavigationDrawer {
                 eggless_checkbox.setVisibility(View.INVISIBLE);
 
             }
-
 
 
             eggless_checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -1714,8 +1608,6 @@ public class ProductDetails extends NavigationDrawer {
                 }
 
             });
-
-
 
 
             timebtn.setOnClickListener(new View.OnClickListener() {
@@ -1809,13 +1701,13 @@ public class ProductDetails extends NavigationDrawer {
                             l1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                  //  Toast.makeText(getApplicationContext(), "u selected" + val.get(position), Toast.LENGTH_SHORT).show();
+                                    //  Toast.makeText(getApplicationContext(), "u selected" + val.get(position), Toast.LENGTH_SHORT).show();
 
                                     timeparam = val.get(position);
 
                                     selectshiplabelstr = "Standard Delivery";
                                     time_edit_txt.setText(val.get(position) + " (Free delivery)");
-                                    SingletonActivity.time= val.get(position) + " (Free delivery)";
+                                    SingletonActivity.time = val.get(position) + " (Free delivery)";
                                     addTocart.setVisibility(View.VISIBLE);
                                     bluraddtocart.setVisibility(View.GONE);
                                     review_dialog.dismiss();
@@ -1828,9 +1720,9 @@ public class ProductDetails extends NavigationDrawer {
                                     timeparam = val3.get(position);
 
                                     selectshiplabelstr = "Mid Night Delivery";
-                                   // Toast.makeText(getApplicationContext(), "u selected" + val3.get(position), Toast.LENGTH_SHORT).show();
+                                    // Toast.makeText(getApplicationContext(), "u selected" + val3.get(position), Toast.LENGTH_SHORT).show();
                                     time_edit_txt.setText(val3.get(position) + " (149 Extra)");
-                                    SingletonActivity.time= val3.get(position) + " (149 Extra)";
+                                    SingletonActivity.time = val3.get(position) + " (149 Extra)";
                                     addTocart.setVisibility(View.VISIBLE);
                                     bluraddtocart.setVisibility(View.GONE);
                                     review_dialog.dismiss();
@@ -1843,9 +1735,9 @@ public class ProductDetails extends NavigationDrawer {
                                     timeparam = val2.get(position);
 
                                     selectshiplabelstr = "Fixed Time Delivery";
-                                  //  Toast.makeText(getApplicationContext(), "u selected" + val2.get(position), Toast.LENGTH_SHORT).show();
+                                    //  Toast.makeText(getApplicationContext(), "u selected" + val2.get(position), Toast.LENGTH_SHORT).show();
                                     time_edit_txt.setText(val2.get(position) + " (100 Extra)");
-                                    SingletonActivity.time= val2.get(position) + " (100 Extra)";
+                                    SingletonActivity.time = val2.get(position) + " (100 Extra)";
                                     addTocart.setVisibility(View.VISIBLE);
                                     bluraddtocart.setVisibility(View.GONE);
                                     review_dialog.dismiss();
@@ -1892,12 +1784,12 @@ public class ProductDetails extends NavigationDrawer {
                             l1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                   // Toast.makeText(getApplicationContext(), "u selected" + val.get(position), Toast.LENGTH_SHORT).show();
+                                    // Toast.makeText(getApplicationContext(), "u selected" + val.get(position), Toast.LENGTH_SHORT).show();
 
                                     timeparam = val.get(position);
                                     selectshiplabelstr = "Standard Delivery";
                                     time_edit_txt.setText(val.get(position) + " (Free delivery)");
-                                    SingletonActivity.time= val.get(position) + " (Free delivery)";
+                                    SingletonActivity.time = val.get(position) + " (Free delivery)";
                                     addTocart.setVisibility(View.VISIBLE);
                                     bluraddtocart.setVisibility(View.GONE);
                                     review_dialog.dismiss();
@@ -1910,9 +1802,9 @@ public class ProductDetails extends NavigationDrawer {
                                     timeparam = val3.get(position);
 
                                     selectshiplabelstr = "Mid Night Delivery";
-                                  //  Toast.makeText(getApplicationContext(), "u selected" + val3.get(position), Toast.LENGTH_SHORT).show();
+                                    //  Toast.makeText(getApplicationContext(), "u selected" + val3.get(position), Toast.LENGTH_SHORT).show();
                                     time_edit_txt.setText(val3.get(position) + " (149 Extra)");
-                                    SingletonActivity.time= val3.get(position) + " (149 Extra)";
+                                    SingletonActivity.time = val3.get(position) + " (149 Extra)";
                                     addTocart.setVisibility(View.VISIBLE);
                                     bluraddtocart.setVisibility(View.GONE);
                                     review_dialog.dismiss();
@@ -2010,7 +1902,7 @@ public class ProductDetails extends NavigationDrawer {
                                     timeparam = val.get(position);
                                     selectshiplabelstr = "Standard Delivery";
                                     time_edit_txt.setText(val.get(position) + " (Free delivery)");
-                                    SingletonActivity.time= val.get(position) + " (Free delivery)";
+                                    SingletonActivity.time = val.get(position) + " (Free delivery)";
                                     addTocart.setVisibility(View.VISIBLE);
                                     bluraddtocart.setVisibility(View.GONE);
                                     review_dialog.dismiss();
@@ -2024,7 +1916,7 @@ public class ProductDetails extends NavigationDrawer {
                                     selectshiplabelstr = "Mid Night Delivery";
                                     Toast.makeText(getApplicationContext(), "u selected" + val3.get(position), Toast.LENGTH_SHORT).show();
                                     time_edit_txt.setText(val3.get(position) + " (149 Extra)");
-                                    SingletonActivity.time= val3.get(position) + " (149 Extra)";
+                                    SingletonActivity.time = val3.get(position) + " (149 Extra)";
                                     addTocart.setVisibility(View.VISIBLE);
                                     bluraddtocart.setVisibility(View.GONE);
                                     review_dialog.dismiss();
@@ -2038,7 +1930,7 @@ public class ProductDetails extends NavigationDrawer {
                                     selectshiplabelstr = "Fixed Time Delivery";
                                     Toast.makeText(getApplicationContext(), "u selected" + val2.get(position), Toast.LENGTH_SHORT).show();
                                     time_edit_txt.setText(val2.get(position) + " (100 Extra)");
-                                    SingletonActivity.time= val2.get(position) + " (100 Extra)";
+                                    SingletonActivity.time = val2.get(position) + " (100 Extra)";
                                     addTocart.setVisibility(View.VISIBLE);
                                     bluraddtocart.setVisibility(View.GONE);
                                     review_dialog.dismiss();
@@ -2136,7 +2028,6 @@ public class ProductDetails extends NavigationDrawer {
 
                 }
             });
-
 
 
             datebtn.setOnClickListener(new View.OnClickListener() {
@@ -2407,7 +2298,7 @@ public class ProductDetails extends NavigationDrawer {
                         Log.e("selected weight..", "selected weight.." + wt_title_array.get(position));
                         Log.e("weight price..", "weight price.." + wt_price_array.get(position));
                         weightstr = wt_title_array.get(position);
-                        tv_pPrice.setText("Rs." + wt_price_array.get(position).replaceAll(".0000",".00"));
+                        tv_pPrice.setText("Rs." + wt_price_array.get(position).replaceAll(".0000", ".00"));
                     }
 
                     @Override
@@ -2427,7 +2318,7 @@ public class ProductDetails extends NavigationDrawer {
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         Log.e("selected flavour..", "selected flavour.." + flvr_title_array.get(position).contains("option_title"));
                         Log.e("flavour price..", "flavour price.." + flvr_price_array.get(position));
-                        flavourstr =  flvr_title_array.get(position);
+                        flavourstr = flvr_title_array.get(position);
 
                     }
 
@@ -2448,7 +2339,7 @@ public class ProductDetails extends NavigationDrawer {
                 size_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                       Log.e("selected size..", "selected size.." + size_array.get(position).contains("size"));
+                        Log.e("selected size..", "selected size.." + size_array.get(position).contains("size"));
 
                         sizestr = size_array.get(position);
                         // Log.e("wt price..", "wt price.." + flvr_price_array.get(position));
@@ -2662,14 +2553,6 @@ public class ProductDetails extends NavigationDrawer {
 
         getMenuInflater().inflate(R.menu.custom_toolbar_menu, menu);
         return true;
-    }
-    private void updateMenuTitles() {
-        MenuItem bedMenuItem = menu.findItem(R.id.action_login);
-        if (inBed) {
-            bedMenuItem.setTitle("Login");
-        } else {
-            bedMenuItem.setTitle("Logout");
-        }
     }
 
 

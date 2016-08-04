@@ -43,6 +43,7 @@ public class Prd_grid_adapter extends BaseAdapter {
     Dialog review_dialog;
     ImageView close_review_dialog;
     Button submit_review_btn;
+    TextView submit_rating_alert;
 
     public Prd_grid_adapter(Activity context, List<HashMap<String, String>> aList) {
 
@@ -107,7 +108,7 @@ public class Prd_grid_adapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 if (SingletonActivity.custidstr.isEmpty()) {
-                    Toast.makeText(context, "Ur not logged in,Please Login", Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(context, "Ur not logged in,Please Login", Toast.LENGTH_SHORT).show();
 
 
                     review_dialog = new Dialog(context, R.style.AppTheme);
@@ -115,7 +116,17 @@ public class Prd_grid_adapter extends BaseAdapter {
                     review_dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     review_dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                     review_dialog.setContentView(R.layout.custom);
+                    submit_rating_alert= (TextView) review_dialog.findViewById(R.id.submit_rating_alert);
+                    submit_rating_alert.setText("Please Login First");
                     submit_review_btn = (Button) review_dialog.findViewById(R.id.submit_review_btn);
+                    submit_review_btn.setText("Login");
+                    submit_review_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent i=new Intent(context,Login.class);
+                            context.startActivity(i);
+                        }
+                    });
                     close_review_dialog = (ImageView) review_dialog.findViewById(R.id.review_submit_close);
                     close_review_dialog.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -123,28 +134,9 @@ public class Prd_grid_adapter extends BaseAdapter {
                             review_dialog.dismiss();
                         }
                     });
-                    submit_review_btn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            review_dialog.dismiss();
-                        }
-                    });
+
                     review_dialog.show();
-
-                 /*   AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                    builder.setTitle("Alert!");
-                    builder.setMessage("Ur not logged in")
-                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    Intent intent = new Intent(context, Login.class);
-                                    context.startActivity(intent);
-                                }
-
-
-                            });
-                    // Create the AlertDialog object and return it
-                    builder.show();*/
-
+                    
                 } else {
                     wishList_url = SingletonActivity.API_URL + "api/add_wishlist.php?customer_id=" + SingletonActivity.custidstr + "&product_id=" + Category_listData.get(position).get("product_id");
                     remove_wishList_url = SingletonActivity.API_URL + "api/remove_item_wishlist.php?customerid=" + SingletonActivity.custidstr + "&productid=" + Category_listData.get(position).get("product_id");

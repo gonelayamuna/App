@@ -127,6 +127,8 @@ public class Login extends NavigationDrawer implements  View.OnClickListener,Goo
 
     }
 
+
+
     private void  login(){
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,SingletonActivity.API_URL+"api/test_login.php?email="+str_login_name+"&&password="+str_login_pwd,
@@ -211,92 +213,6 @@ public class Login extends NavigationDrawer implements  View.OnClickListener,Goo
                             // TODO Auto-generated catch block
                             e.printStackTrace();
                         }
-
-
-                   /*
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            System.out.println("JSONOBJECT response is" +jsonObject);
-
-                            String isSuccessstr = jsonObject.getString("isSuccess");
-                            System.out.println("IS SUCCESS STRING IS----" +isSuccessstr);
-
-                            String TotalCartCount = jsonObject.getString("count");
-                            System.out.println("TOTAL CART COUNT IS----" + TotalCartCount);
-
-                           // cartcounttxt.setText(TotalCartCount);
-
-                            JSONArray jsonArray = jsonObject.getJSONArray("result");
-                            System.out.println("JSON ARRAY IS----" +jsonArray);
-
-                            JSONObject mainObject = jsonArray.getJSONObject(0);
-                            System.out.println("MAIN OBJECT IS----" +mainObject);
-
-                            String custid = mainObject.getString("customer_id");
-                            String custname = mainObject.getString("customer_name");
-                            String custemail = mainObject.getString("customer_email");
-
-                            System.out.println("CUSTOMER ID IS----" +custid);
-                            System.out.println("CUSTOMER NAME IS----" + custname);
-                            System.out.println("CUSTOMER EMAIL IS----" + custemail);
-
-
-                            dialogcustnamestr = custname;
-
-                            SingletonActivity.custidstr=custid;
-                            SingletonActivity.custnamestr=custname;
-                            SingletonActivity.custemailstr=custemail;
-                            SingletonActivity.cartcount=TotalCartCount;
-
-
-
-                            if( dialogcustnamestr!=null) {
-                                String[] parts =  dialogcustnamestr.split(" ");
-                                customfirstnme = parts[0]; // 004
-                                customlastnme  = parts[1]; // 034556
-                                System.out.println("PART 1-----" + customfirstnme);
-                                System.out.println("PART 2-----" + customlastnme);
-
-                            }
-                            SingletonActivity.custfirstname=customfirstnme;
-                            SingletonActivity.custlastname=customlastnme;
-
-                            if(custid!=null){
-
-
-                                SharedPreferences.Editor editor = getSharedPreferences(
-                                        MyPREFERENCES, MODE_PRIVATE).edit();
-                                editor.putBoolean("loginlogoutkey", true);
-                                editor.putString("customerid", SingletonActivity.custidstr);
-                                editor.putString("firstname",  customfirstnme);
-                                editor.putString("lastname",  customlastnme);
-                                editor.putString("cartcount", SingletonActivity.cartcount);
-                                editor.putString("senderemail", custemail);
-
-                              //  editor.putString("")
-
-                                editor.commit();
-
-                                Toast.makeText(getApplicationContext(),"Successfully logged in",Toast.LENGTH_SHORT).show();
-                                finish();
-
-                                cartcounttxt.setText(SingletonActivity.cartcount);
-
-
-
-                             *//*Intent i = new Intent(Login.this,HomePage.class);
-                                startActivity(i);*//*
-                            }
-
-
-							} catch (JSONException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}*/
-
-
-
-
 
                     }
                 },
