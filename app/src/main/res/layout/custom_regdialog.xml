@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/signupdialogrelative"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#ffffff"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        >
+
+
+        <TextView
+            android:id="@+id/registertext"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registered Successfully!!"
+            android:layout_below="@+id/textinputpwd"
+            android:layout_marginTop="25dp"
+           android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/registertext"
+            android:background="#CF0A8B"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+
+            android:text="OK" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -36,6 +36,7 @@ public class Prd_grid_adapter extends BaseAdapter {
     List<HashMap<String, String>> Category_listData;
     HashMap<String, String> map;
     Context context;
+    Activity activity;
     Typeface face;
     String wishList_url, remove_wishList_url;
     Cursor cursor;
@@ -45,7 +46,7 @@ public class Prd_grid_adapter extends BaseAdapter {
     Button submit_review_btn;
     TextView submit_rating_alert;
 
-    public Prd_grid_adapter(Activity context, List<HashMap<String, String>> aList) {
+    public Prd_grid_adapter(Activity activity, List<HashMap<String, String>> aList) {
 
 
         // TODO Auto-generated constructor stub
@@ -54,8 +55,9 @@ public class Prd_grid_adapter extends BaseAdapter {
         {
             Category_listData.add(aList.get(i));
         }*/
-        this.context = context;
-        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+       // this.context = context;
+        this.activity=activity;
+        inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
 
     }
@@ -83,7 +85,7 @@ public class Prd_grid_adapter extends BaseAdapter {
         // TODO Auto-generated method stub
         final Holder holder = new Holder();
         final View rowView;
-        this.face = Typeface.createFromAsset(context.getAssets(), "fonts/OpenSans-Regular.ttf");
+        this.face = Typeface.createFromAsset(activity.getAssets(), "fonts/OpenSans-Regular.ttf");
         rowView = inflater.inflate(R.layout.grid_item_view, null);
         holder.name = (TextView) rowView.findViewById(R.id.p_name);
         holder.img = (ImageView) rowView.findViewById(R.id.p_img);
@@ -111,7 +113,7 @@ public class Prd_grid_adapter extends BaseAdapter {
                   //  Toast.makeText(context, "Ur not logged in,Please Login", Toast.LENGTH_SHORT).show();
 
 
-                    review_dialog = new Dialog(context, R.style.AppTheme);
+                    review_dialog = new Dialog(activity, R.style.AppTheme);
                     review_dialog.setCancelable(false);
                     review_dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     review_dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -123,8 +125,9 @@ public class Prd_grid_adapter extends BaseAdapter {
                     submit_review_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent i=new Intent(context,Login.class);
-                            context.startActivity(i);
+                            Intent i=new Intent(activity,Login.class);
+                            activity.startActivity(i);
+                            review_dialog.dismiss();
                         }
                     });
                     close_review_dialog = (ImageView) review_dialog.findViewById(R.id.review_submit_close);
@@ -136,7 +139,7 @@ public class Prd_grid_adapter extends BaseAdapter {
                     });
 
                     review_dialog.show();
-                    
+
                 } else {
                     wishList_url = SingletonActivity.API_URL + "api/add_wishlist.php?customer_id=" + SingletonActivity.custidstr + "&product_id=" + Category_listData.get(position).get("product_id");
                     remove_wishList_url = SingletonActivity.API_URL + "api/remove_item_wishlist.php?customerid=" + SingletonActivity.custidstr + "&productid=" + Category_listData.get(position).get("product_id");
@@ -150,10 +153,10 @@ public class Prd_grid_adapter extends BaseAdapter {
                     if (stat == 0) {
 
                         nav.addTowishList(wishList_url);
-                        Toast.makeText(context, "addedd..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "addedd..", Toast.LENGTH_SHORT).show();
                         //holder.wish_list.setImageResource(R.drawable.wishlist);
-                        Resources resources = context.getResources();
-                        holder.wish_list.setImageDrawable(ContextCompat.getDrawable(context,
+                        Resources resources = activity.getResources();
+                        holder.wish_list.setImageDrawable(ContextCompat.getDrawable(activity,
                                 R.drawable.wishlist));
                         Category_listData.get(position).put("is_wishlist","1");
 
@@ -162,8 +165,8 @@ public class Prd_grid_adapter extends BaseAdapter {
 
                         nav.removeFromwishList(remove_wishList_url);
                         // holder.wish_list.setImageResource(R.drawable.empty_wishlist);
-                        Toast.makeText(context, "removed....", Toast.LENGTH_SHORT).show();
-                        Resources resources = context.getResources();
+                        Toast.makeText(activity, "removed....", Toast.LENGTH_SHORT).show();
+                        Resources resources = activity.getResources();
                         holder.wish_list.setImageDrawable(resources.getDrawable(R.drawable.empty_wishlist));
                         Category_listData.get(position).put("is_wishlist","0");
 
@@ -192,7 +195,7 @@ public class Prd_grid_adapter extends BaseAdapter {
             holder.price.setVisibility(View.INVISIBLE);
             // holder.o_price.setVisibility(View.INVISIBLE);
             holder.original_price.setText("Rs." + map.get("product_price"));
-            holder.original_price.setTextAppearance(context, R.style.product_price_txt);
+            holder.original_price.setTextAppearance(activity, R.style.product_price_txt);
 
         } else {
             holder.price.setText("Rs." + map.get("special_price"));
@@ -205,7 +208,7 @@ public class Prd_grid_adapter extends BaseAdapter {
        /* holder.price.setText("Rs." + map.get("special_price"));
         holder.original_price.setText("Rs."+map.get("product_price"));
         holder.original_price.setPaintFlags(holder.original_price.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);*/
-        Picasso.with(context).load(map.get("product_image")).placeholder(R.drawable.loading)
+        Picasso.with(activity).load(map.get("product_image")).placeholder(R.drawable.loading)
                 .fit().into(holder.img);
 
         return rowView;

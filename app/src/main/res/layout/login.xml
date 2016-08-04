@@ -88,10 +88,11 @@
         android:layout_height="wrap_content"
         android:text="New User? Register Here"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#FF0000"
+        android:textColor="@drawable/green_text_color"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/login_btn"
         android:layout_centerInParent="true"
+
          />
 
 </RelativeLayout>

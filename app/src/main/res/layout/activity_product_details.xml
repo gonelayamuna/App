@@ -579,14 +579,7 @@
                 android:layout_toRightOf="@+id/in_time"
                 android:text="SELECT TIME"/>
 -->
-            <RelativeLayout
-                android:id="@+id/image_upload_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/rel_outtr_delivery">
 
-
-            </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/wt_outer"
@@ -594,9 +587,10 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/image_upload_layout"
+                android:layout_below="@+id/image_upload_relativelayout"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="25dp"
+
                 android:layout_marginTop="20dp">
 
                 <Spinner
@@ -1491,49 +1485,50 @@
                     android:visibility="gone" />
             </RelativeLayout>
 
-            <TextView
-                android:id="@+id/image_upload"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/wt_outer"
-                android:layout_alignStart="@+id/wt_outer"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:id="@+id/image_upload_relativelayout"
                 android:layout_below="@+id/rel_outtr_delivery"
-                android:text="Image Upload *"
-                android:gravity="center"/>
+                android:layout_alignParentStart="true">
 
-            <Button
-                android:id="@+id/image_upload_btn"
-                style="@style/btn_style"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_below="@+id/rel_outtr_delivery"
-                android:layout_marginLeft="22dp"
-                android:layout_marginStart="22dp"
-                android:layout_toEndOf="@+id/image_upload"
-                android:layout_toRightOf="@+id/image_upload"
-                android:gravity="center"
-                android:text="Choose file" />
+                <TextView
+                    android:id="@+id/image_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Image Upload *"
+                    android:gravity="center"/>
 
-            <TextView
-                android:id="@+id/file_chosen_stat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/rel_outtr_delivery"
-                android:layout_toEndOf="@+id/checkbox_eggless"
-                android:layout_toRightOf="@+id/checkbox_eggless"
-                android:gravity="center"
-                android:textColor="@color/background_color"
-                android:text="No file chosen" />
+                <Button
+                    android:id="@+id/image_upload_btn"
+                    style="@style/btn_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
 
-           <!-- <TextView
-                android:id="@+id/star"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/image_upload"
-                android:layout_alignStart="@+id/image_upload"
-                android:layout_below="@+id/image_upload"
-                android:text="*"
-                android:textColor="#FF0000" />-->
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_toEndOf="@+id/image_upload"
+                    android:layout_toRightOf="@+id/image_upload"
+                    android:gravity="center"
+                    android:text="Choose file" />
+
+                <TextView
+                    android:id="@+id/file_chosen_stat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:textColor="@color/background_color"
+                    android:text="No file chosen"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/image_upload_btn"
+                    android:layout_toEndOf="@+id/image_upload_btn" />
+
+            </RelativeLayout>
 
 
         </RelativeLayout>

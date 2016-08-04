@@ -1,9 +1,12 @@
 package com.example.user.smgapp;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -11,8 +14,10 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +43,11 @@ public class RegistrationActivity extends NavigationDrawer {
     EditText firstnameedttxt, lastnameedttxt, emailedttxt, mobileedttxt, pwdedttxt, confrmpwdedttxt;
     RegistrationModel regmodel;
     TextView app_title;
+    Context context;
+    Dialog registration_dialog;
     UtilsDialog util = new UtilsDialog();
+    ImageView close_reg_dialog;
+    Button submit_regdialog_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -285,10 +294,41 @@ public class RegistrationActivity extends NavigationDrawer {
 
                     editor.commit();
 
-                    util.dialog(RegistrationActivity.this, "Registered Successfully");
+                    registration_dialog = new Dialog(RegistrationActivity.this, R.style.AppTheme);
+                    registration_dialog.setCancelable(false);
+                    registration_dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    registration_dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    registration_dialog.setContentView(R.layout.custom_regdialog);
+                    submit_regdialog_btn= (Button) registration_dialog.findViewById(R.id.ok_button);
 
-                    Intent i = new Intent(RegistrationActivity.this,HomePage.class);
-                    startActivity(i);
+                    submit_regdialog_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            registration_dialog.dismiss();
+                            Intent intent = new Intent(getApplicationContext(), HomePage.class);
+                            startActivity(intent);
+                        }
+                    });
+                    registration_dialog.show();
+
+                  /*  AlertDialog.Builder builder = new AlertDialog.Builder(RegistrationActivity.this);
+                    builder.setTitle("Alert!");
+                    builder.setMessage("Registered Successfully")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    Intent intent = new Intent(getApplicationContext(), HomePage.class);
+                                    startActivity(intent);
+                                }
+
+
+                            });
+                    // Create the AlertDialog object and return it
+                    builder.show();*/
+
+                   // util.dialog(RegistrationActivity.this, "Registered Successfully");
+
+                  /*  Intent i = new Intent(RegistrationActivity.this,HomePage.class);
+                    startActivity(i);*/
 
 
 

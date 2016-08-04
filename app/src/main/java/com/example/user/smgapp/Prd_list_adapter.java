@@ -41,6 +41,7 @@ public class Prd_list_adapter extends BaseAdapter {
     Dialog review_dialog;
     ImageView close_review_dialog;
     Button submit_review_btn;
+    TextView submit_rating_alert;
 
     String wishList_url,remove_wishList_url,ProductName;
     NavigationDrawer nav=new NavigationDrawer();
@@ -148,14 +149,26 @@ public class Prd_list_adapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 if (SingletonActivity.custidstr.isEmpty()) {
-                    Toast.makeText(context, "Ur not logged in,Please Login", Toast.LENGTH_SHORT).show();
+                    //  Toast.makeText(context, "Ur not logged in,Please Login", Toast.LENGTH_SHORT).show();
+
 
                     review_dialog = new Dialog(context, R.style.AppTheme);
                     review_dialog.setCancelable(false);
                     review_dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     review_dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                     review_dialog.setContentView(R.layout.custom);
+                    submit_rating_alert= (TextView) review_dialog.findViewById(R.id.submit_rating_alert);
+                    submit_rating_alert.setText("Please Login First");
                     submit_review_btn = (Button) review_dialog.findViewById(R.id.submit_review_btn);
+                    submit_review_btn.setText("Login");
+                    submit_review_btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent i=new Intent(context,Login.class);
+                            context.startActivity(i);
+                            review_dialog.dismiss();
+                        }
+                    });
                     close_review_dialog = (ImageView) review_dialog.findViewById(R.id.review_submit_close);
                     close_review_dialog.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -163,12 +176,7 @@ public class Prd_list_adapter extends BaseAdapter {
                             review_dialog.dismiss();
                         }
                     });
-                    submit_review_btn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            review_dialog.dismiss();
-                        }
-                    });
+
                     review_dialog.show();
 
                 } else {
@@ -184,27 +192,30 @@ public class Prd_list_adapter extends BaseAdapter {
                     if (stat == 0) {
 
                         nav.addTowishList(wishList_url);
-                        Toast.makeText(context, "addedd..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Addedd..", Toast.LENGTH_SHORT).show();
                         //holder.wish_list.setImageResource(R.drawable.wishlist);
                         Resources resources = context.getResources();
                         holder.wish_list.setImageDrawable(ContextCompat.getDrawable(context,
                                 R.drawable.wishlist));
-                        Category_listData.get(position).put("is_wishlist", "1");
+                        Category_listData.get(position).put("is_wishlist","1");
 
 
                     } else {
 
                         nav.removeFromwishList(remove_wishList_url);
                         // holder.wish_list.setImageResource(R.drawable.empty_wishlist);
-                        Toast.makeText(context, "removed....", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Removed....", Toast.LENGTH_SHORT).show();
                         Resources resources = context.getResources();
                         holder.wish_list.setImageDrawable(resources.getDrawable(R.drawable.empty_wishlist));
-                        Category_listData.get(position).put("is_wishlist", "0");
+                        Category_listData.get(position).put("is_wishlist","0");
 
                     }
+
+
                 }
 
-        }
+
+            }
         });
         return rowView;
     }

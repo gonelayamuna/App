@@ -1286,6 +1286,7 @@ public class ProductDetails extends NavigationDrawer {
 
                     if (!jsonObjectResult.isNull("bangalore_price")) {
                         bangalore_price = jsonObjectResult.getString("bangalore_price");
+                        Log.e("blr price..","blr price.."+bangalore_price);
                     }
                     if (!jsonObjectResult.isNull("delhi_price")) {
                         delhi_price = jsonObjectResult.getString("delhi_price");
@@ -2381,35 +2382,51 @@ public class ProductDetails extends NavigationDrawer {
             salesPkg_des.setText(sales_packages_value);
             Log.e("banaglore price.", "bangalore price.." + bangalore_price);
 
-            if (bangalore_price.contains("0") || bangalore_price.equals("null")) {
+
+
+            if (bangalore_price.equals("0") || bangalore_price.equals("null")) {
                 p_det_priceTxt_1.setVisibility(View.GONE);
                 p_det_price_1.setVisibility(View.GONE);
+                Log.e("if b price..","if b price.."+bangalore_price);
 
             } else {
                 p_det_priceTxt_1.setVisibility(View.VISIBLE);
                 p_det_price_1.setVisibility(View.VISIBLE);
-                p_det_price_1.setText("Rs." + bangalore_price.replaceAll(".0000", ".00"));
+                p_det_price_1.setText( bangalore_price.replaceAll(".0000", ".00"));
+                Log.e("else b price..","else b price.."+bangalore_price);
             }
-            if (mumbai_price.equals("null") || mumbai_price.contains("0")) {
+            if (mumbai_price.equals("null") || mumbai_price.equals("0")) {
                 p_det_priceTxt_3.setVisibility(View.GONE);
                 p_det_price_3.setVisibility(View.GONE);
 
             } else {
                 p_det_priceTxt_3.setVisibility(View.VISIBLE);
                 p_det_price_3.setVisibility(View.VISIBLE);
-                p_det_price_3.setText("Rs." + mumbai_price.replaceAll(".0000", ".00"));
+                p_det_price_3.setText(mumbai_price.replaceAll(".0000", ".00"));
             }
-            if (delhi_price.contains("0") || delhi_price.equals("null")) {
+            if (delhi_price.equals("0") || delhi_price.equals("null")) {
                 p_det_priceTxt_2.setVisibility(View.GONE);
                 p_det_price_2.setVisibility(View.GONE);
 
 
-            } else {
+            }
+
+            else {
                 p_det_priceTxt_2.setVisibility(View.VISIBLE);
                 p_det_price_2.setVisibility(View.VISIBLE);
-                p_det_price_2.setText("Rs." + delhi_price.replaceAll(".0000", ".00"));
+                p_det_price_2.setText(delhi_price.replaceAll(".0000", ".00"));
             }
-            if (bangalore_price.equals("null") && mumbai_price.equals("null") && mumbai_price.contains("null") || bangalore_price.contains("0") && mumbai_price.contains("0") && mumbai_price.contains("0")) {
+            if (chennai_price.equals("0") || chennai_price.equals("null")) {
+                p_det_priceTxt_3.setVisibility(View.GONE);
+                p_det_price_3.setVisibility(View.GONE);
+
+
+            } else {
+                p_det_priceTxt_3.setVisibility(View.VISIBLE);
+                p_det_price_3.setVisibility(View.VISIBLE);
+                p_det_price_3.setText(chennai_price.replaceAll(".0000", ".00"));
+            }
+            if (bangalore_price.equals("null") && mumbai_price.equals("null") && delhi_price.equals("null")&& chennai_price.equals("null") || bangalore_price.equals("0") && mumbai_price.equals("0") && delhi_price.equals("0")&& chennai_price.equals("0")) {
                 table_det_pg_price.setVisibility(View.GONE);
             }
 
